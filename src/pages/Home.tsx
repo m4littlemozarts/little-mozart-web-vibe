@@ -3,10 +3,8 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
 import { Music, Heart, Users, MapPin } from "lucide-react";
-
 const Home = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="section-container text-center py-16 sm:py-24">
@@ -15,10 +13,14 @@ const Home = () => {
             <MusicNote className="w-12 h-16 text-golden animate-float" />
           </div>
           <div className="absolute top-20 right-16 opacity-10">
-            <MusicNote variant="treble" className="w-8 h-16 text-dusty-rose animate-float" style={{ animationDelay: "1s" }} />
+            <MusicNote variant="treble" className="w-8 h-16 text-dusty-rose animate-float" style={{
+            animationDelay: "1s"
+          }} />
           </div>
           <div className="absolute bottom-20 left-20 opacity-10">
-            <MusicNote variant="bass" className="w-10 h-10 text-sage animate-float" style={{ animationDelay: "2s" }} />
+            <MusicNote variant="bass" className="w-10 h-10 text-sage animate-float" style={{
+            animationDelay: "2s"
+          }} />
           </div>
 
           {/* Mozart character placeholder */}
@@ -33,32 +35,31 @@ const Home = () => {
             </div>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-in">
-            Music for Little Mozart
-          </h1>
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-in">Music for Little Mozarts</h1>
           
-          <p className="font-heading text-xl sm:text-2xl text-muted-foreground mb-8 italic animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <p className="font-heading text-xl sm:text-2xl text-muted-foreground mb-8 italic animate-fade-in" style={{
+          animationDelay: "0.1s"
+        }}>
             Where young musicians begin their musical journey
           </p>
 
           <DecorativeDivider className="my-8" />
 
-          <div className="max-w-2xl mx-auto space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <p className="font-body text-lg text-foreground leading-relaxed">
-              Welcome to our warm and nurturing music program designed especially for 
-              preschool-aged children. At Music for Little Mozart, we believe every child 
-              has a natural love for music—our job is simply to help it bloom.
-            </p>
+          <div className="max-w-2xl mx-auto space-y-6 animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
+            <p className="font-body text-lg text-foreground leading-relaxed">In Music for Little Mozarts Class, parents and children have the opportunity to share in the joy of making music together.</p>
             
-            <p className="font-body text-foreground leading-relaxed">
-              Using the beloved <em>Music for Little Mozarts</em> curriculum, we guide 
+            <p className="font-body text-foreground leading-relaxed">Starting music class early builds on the pre-school age child's sense of fantasy (learning piano with music friends Mozart Mouse and Beethoven Bear), their ear's ability to absorb musical pitches, rhythms, musical patterns, and their enthusiasm for learning new things.<em>Music for Little Mozarts</em> curriculum, we guide 
               young learners ages 4-6 through a joyful introduction to piano, music 
               fundamentals, and creative expression. Classes are held at the beautiful 
               Steinway Gallery in Reno, Nevada.
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
+          animationDelay: "0.3s"
+        }}>
             <Link to="/program" className="btn-primary inline-flex items-center justify-center gap-2">
               <Heart className="w-4 h-4" />
               Discover Our Program
@@ -131,8 +132,6 @@ const Home = () => {
           </Link>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Home;
