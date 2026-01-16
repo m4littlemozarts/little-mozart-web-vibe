@@ -1,0 +1,242 @@
+import { useState } from "react";
+import Layout from "@/components/Layout";
+import DecorativeDivider from "@/components/DecorativeDivider";
+import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+
+const Contact = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name as keyof ContactFormData]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form
+    const result = contactSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const fieldErrors: Partial<ContactFormData> = {};
+      result.error.errors.forEach((error) => {
+        const field = error.path[0] as keyof ContactFormData;
+        fieldErrors[field] = error.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    // Form is valid - in a real app, this would send to a backend
+    setIsSubmitted(true);
+  };
+
+  return (
+    <Layout>
+      {/* Hero */}
+      <section className="section-container text-center">
+        <h1 className="section-heading text-4xl sm:text-5xl">Contact Us</h1>
+        <div className="section-heading-underline mx-auto" />
+        <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          We'd love to hear from you! Whether you have questions about our program, 
+          want to schedule a visit, or are ready to enroll your little musician, 
+          reach out anytime.
+        </p>
+      </section>
+
+      <DecorativeDivider className="mb-12" />
+
+      <section className="section-container pt-0">
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+              Send Us a Message
+            </h2>
+
+            {isSubmitted ? (
+              <div className="paper-card text-center py-12">
+                <CheckCircle className="w-16 h-16 text-sage mx-auto mb-4" />
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
+                  Thank You!
+                </h3>
+                <p className="font-body text-muted-foreground">
+                  Your message has been received. We'll get back to you soon!
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Name Field */}
+                <div>
+                  <label htmlFor="name" className="block font-heading font-medium text-foreground mb-1">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors ${
+                      errors.name ? "border-destructive" : "border-border focus:border-golden"
+                    }`}
+                    placeholder="Jane Smith"
+                  />
+                  {errors.name && (
+                    <p className="mt-1 font-body text-sm text-destructive">{errors.name}</p>
+                  )}
+                </div>
+
+                {/* Email Field */}
+                <div>
+                  <label htmlFor="email" className="block font-heading font-medium text-foreground mb-1">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors ${
+                      errors.email ? "border-destructive" : "border-border focus:border-golden"
+                    }`}
+                    placeholder="jane@example.com"
+                  />
+                  {errors.email && (
+                    <p className="mt-1 font-body text-sm text-destructive">{errors.email}</p>
+                  )}
+                </div>
+
+                {/* Message Field */}
+                <div>
+                  <label htmlFor="message" className="block font-heading font-medium text-foreground mb-1">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors resize-none ${
+                      errors.message ? "border-destructive" : "border-border focus:border-golden"
+                    }`}
+                    placeholder="Tell us about your child and what you're looking for in a music program..."
+                  />
+                  {errors.message && (
+                    <p className="mt-1 font-body text-sm text-destructive">{errors.message}</p>
+                  )}
+                </div>
+
+                <button type="submit" className="btn-primary inline-flex items-center gap-2">
+                  <Send className="w-4 h-4" />
+                  Send Message
+                </button>
+              </form>
+            )}
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+              Visit Our Studio
+            </h2>
+
+            <div className="paper-card mb-6">
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-golden/20 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-golden" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold text-foreground mb-1">
+                      Location
+                    </h3>
+                    <p className="font-body text-muted-foreground">
+                      Steinway Gallery<br />
+                      Reno, Nevada
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-dusty-rose/20 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-dusty-rose" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold text-foreground mb-1">
+                      Email
+                    </h3>
+                    <a 
+                      href="mailto:info@littlemozart.com" 
+                      className="font-body text-golden hover:underline"
+                    >
+                      info@littlemozart.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-sage" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold text-foreground mb-1">
+                      Phone
+                    </h3>
+                    <a 
+                      href="tel:+17755551234" 
+                      className="font-body text-golden hover:underline"
+                    >
+                      (775) 555-1234
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="bg-cream rounded-lg border-2 border-border p-6">
+              <h3 className="font-heading font-semibold text-foreground mb-3">
+                Class Schedule
+              </h3>
+              <p className="font-body text-muted-foreground text-sm mb-4">
+                Classes are held on weekday afternoons and Saturday mornings. 
+                Contact us for current availability and session dates.
+              </p>
+              <h3 className="font-heading font-semibold text-foreground mb-3">
+                What to Bring
+              </h3>
+              <p className="font-body text-muted-foreground text-sm">
+                Just bring your child and their curiosity! All materials are 
+                provided. Students will receive their own lesson books to take home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Contact;
