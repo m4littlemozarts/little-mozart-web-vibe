@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
-import { Heart, Users, MapPin, Music } from "lucide-react";
-import mozartMouseBear from "@/assets/mozart-mouse-bear.png";
-import groupCharacters from "@/assets/group-characters.png";
-
+import { Music, Heart, Users, MapPin } from "lucide-react";
 const Home = () => {
   return <Layout>
       {/* Hero Section */}
@@ -26,22 +23,23 @@ const Home = () => {
           }} />
           </div>
 
-          {/* Mozart Mouse and Bear illustration */}
+          {/* Mozart character placeholder */}
           <div className="mb-8 flex justify-center">
-            <img 
-              src={mozartMouseBear} 
-              alt="Mozart Mouse and Beethoven Bear with magical music book" 
-              className="w-64 sm:w-80 h-auto"
-            />
+            <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-cream border-4 border-golden flex items-center justify-center shadow-lg">
+              <div className="text-center">
+                <Music className="w-16 h-16 sm:w-20 sm:h-20 text-golden mx-auto mb-2" />
+                <span className="font-heading text-xs text-muted-foreground">
+                  Character Art<br />Coming Soon
+                </span>
+              </div>
+            </div>
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-in">Music for Little Mozarts</h1>
           
           <p className="font-heading text-xl sm:text-2xl text-muted-foreground mb-8 italic animate-fade-in" style={{
           animationDelay: "0.1s"
-        }}>
-            Where young musicians begin their musical journey
-          </p>
+        }}>A Piano Course to Bring Out the Music in Every Young Child</p>
 
           <DecorativeDivider className="my-8" />
 
@@ -50,20 +48,11 @@ const Home = () => {
         }}>
             <p className="font-body text-lg text-foreground leading-relaxed">In Music for Little Mozarts Class, parents and children have the opportunity to share in the joy of making music together.</p>
             
-            <p className="font-body text-foreground leading-relaxed">Starting music class early builds on the pre-school age child's sense of fantasy (learning piano with music friends Mozart Mouse and Beethoven Bear), their ear's ability to absorb musical pitches, rhythms, musical patterns, and their enthusiasm for learning new things. Using the <em>Music for Little Mozarts</em> curriculum, we guide 
+            <p className="font-body text-foreground leading-relaxed">Starting music class early builds on the pre-school age child's sense of fantasy (learning piano with music friends Mozart Mouse and Beethoven Bear), their ear's ability to absorb musical pitches, rhythms, musical patterns, and their enthusiasm for learning new things.<em>Music for Little Mozarts</em> curriculum, we guide 
               young learners ages 4-6 through a joyful introduction to piano, music 
               fundamentals, and creative expression. Classes are held at the beautiful 
               Steinway Gallery in Reno, Nevada.
             </p>
-          </div>
-
-          {/* Group characters illustration */}
-          <div className="my-8 flex justify-center animate-fade-in" style={{ animationDelay: "0.25s" }}>
-            <img 
-              src={groupCharacters} 
-              alt="Music for Little Mozarts characters - the whole musical gang" 
-              className="w-72 sm:w-96 h-auto"
-            />
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
