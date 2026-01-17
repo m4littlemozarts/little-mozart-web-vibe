@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Quicksand"', 'system-ui', 'sans-serif'],
-        body: ['"Lato"', 'system-ui', 'sans-serif'],
+        heading: ['"Baloo 2"', 'system-ui', 'sans-serif'],
+        body: ['"Nunito"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
