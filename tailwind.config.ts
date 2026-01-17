@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         heading: ['"Noteworthy"', '"Kalam"', '"Baloo 2"', 'system-ui', 'sans-serif'],
-        body: ['"Nunito"', 'system-ui', 'sans-serif'],
+        body: ['"Avenir"', '"Nunito"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
