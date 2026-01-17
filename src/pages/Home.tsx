@@ -38,7 +38,7 @@ const Home = () => {
           
           <p className="font-heading text-xl sm:text-2xl text-muted-foreground mb-8 italic animate-fade-in" style={{
           animationDelay: "0.1s"
-        }}>yeet</p>
+        }}>A Piano Course to Bring Out the Music in Every Young Child</p>
 
           <DecorativeDivider className="my-8" />
 
