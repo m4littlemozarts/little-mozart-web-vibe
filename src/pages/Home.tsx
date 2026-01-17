@@ -3,8 +3,8 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
 import { Heart, Users, MapPin, Music } from "lucide-react";
-import mozartMouseBear from "@/assets/mozart-mouse-bear.jpg";
-import groupCharacters from "@/assets/group-characters.jpg";
+import mozartMouseBear from "@/assets/mozart-mouse-bear.png";
+import groupCharacters from "@/assets/group-characters.png";
 
 const Home = () => {
   return <Layout>
