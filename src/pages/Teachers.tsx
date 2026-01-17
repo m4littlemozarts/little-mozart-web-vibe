@@ -2,14 +2,14 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import { User } from "lucide-react";
 
-interface InstructorProps {
+interface TeacherProps {
   name: string;
   bio: string;
   youtubeId?: string;
   imageUrl?: string;
 }
 
-const InstructorCard = ({ name, bio, youtubeId, imageUrl }: InstructorProps) => {
+const TeacherCard = ({ name, bio, youtubeId, imageUrl }: TeacherProps) => {
   return (
     <div className="paper-card">
       <div className="grid md:grid-cols-2 gap-6">
@@ -27,7 +27,7 @@ const InstructorCard = ({ name, bio, youtubeId, imageUrl }: InstructorProps) => 
               <div className="text-center p-4">
                 <User className="w-16 h-16 text-golden mx-auto mb-2" />
                 <p className="font-heading text-sm text-muted-foreground">
-                  Instructor Photo
+                  Teacher Photo
                 </p>
               </div>
             )}
@@ -78,9 +78,9 @@ const InstructorCard = ({ name, bio, youtubeId, imageUrl }: InstructorProps) => 
   );
 };
 
-const Instructors = () => {
-  // Placeholder instructor data - YouTube IDs and photos will be added later
-  const instructors: InstructorProps[] = [
+const Teachers = () => { // Renamed component
+  // Placeholder teacher data - YouTube IDs and photos will be added later
+  const teachers: TeacherProps[] = [ // Renamed variable
     {
       name: "Sarah Mitchell",
       bio: "Sarah has been teaching piano to young children for over 15 years. With a Master's degree in Music Education and specialized training in early childhood development, she brings warmth, patience, and creativity to every lesson. Sarah believes that every child is naturally musical—they just need the right environment to flourish.",
@@ -99,10 +99,10 @@ const Instructors = () => {
     <Layout>
       {/* Hero */}
       <section className="section-container text-center">
-        <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Instructors</h1>
+        <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1> {/* Updated text */}
         <div className="section-heading-underline mx-auto" />
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-          Our instructors are passionate educators with specialized training in 
+          Our teachers are passionate educators with specialized training in 
           early childhood music education. They create a nurturing, joyful environment 
           where young musicians can thrive.
         </p>
@@ -110,11 +110,11 @@ const Instructors = () => {
 
       <DecorativeDivider className="mb-12" />
 
-      {/* Instructor Cards */}
+      {/* Teacher Cards */}
       <section className="section-container pt-0">
         <div className="space-y-12">
-          {instructors.map((instructor, index) => (
-            <InstructorCard key={index} {...instructor} />
+          {teachers.map((teacher, index) => ( // Updated variable and component
+            <TeacherCard key={index} {...teacher} /> // Updated component
           ))}
         </div>
       </section>
@@ -123,7 +123,7 @@ const Instructors = () => {
       <section className="section-container pt-0">
         <div className="bg-cream rounded-lg border-2 border-border p-6 text-center max-w-2xl mx-auto">
           <p className="font-body text-muted-foreground italic">
-            More instructor profiles and videos coming soon! Check back for updates 
+            More teacher profiles and videos coming soon! Check back for updates 
             or <a href="/contact" className="text-golden hover:underline">contact us</a> to 
             learn more about our teaching team.
           </p>
@@ -133,4 +133,4 @@ const Instructors = () => {
   );
 };
 
-export default Instructors;
+export default Teachers; // Renamed export

@@ -9,7 +9,7 @@ const Header = () => {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/program", label: "Program" },
-    { to: "/instructors", label: "Instructors" },
+    { to: "/teachers", label: "Teachers" }, // Updated label and path
     { to: "/contact", label: "Contact" },
   ];
 
