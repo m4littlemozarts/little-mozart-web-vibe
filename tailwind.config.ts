@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Permanent Marker"', '"Baloo 2"', 'system-ui', 'sans-serif'],
+        heading: ['"Chalkboard SE"', '"Baloo 2"', 'system-ui', 'sans-serif'],
         body: ['"Nunito"', 'system-ui', 'sans-serif'],
       },
       colors: {
