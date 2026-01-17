@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Noteworthy"', '"Baloo 2"', 'system-ui', 'sans-serif'],
+        heading: ['"Noteworthy"', '"Kalam"', '"Baloo 2"', 'system-ui', 'sans-serif'],
         body: ['"Nunito"', 'system-ui', 'sans-serif'],
       },
       colors: {
