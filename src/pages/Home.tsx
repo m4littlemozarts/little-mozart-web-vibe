@@ -3,8 +3,8 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
 import { Music, Heart, Users, MapPin } from "lucide-react";
-import mozartMouseBear from "@/assets/mozart-mouse-bear.png";
-import groupCharacters from "@/assets/group-characters.png";
+import mozartMouseBear from "@/assets/mozart-mouse-bear-transparent.png";
+import groupCharacters from "@/assets/group-characters-transparent.png";
 const Home = () => {
   return <Layout>
       {/* Hero Section */}
@@ -27,10 +27,10 @@ const Home = () => {
 
           {/* Mozart character image */}
           <div className="mb-8 flex justify-center">
-            <img 
-              src={mozartMouseBear} 
-              alt="Mozart Mouse and Beethoven Bear characters" 
-              className="w-48 h-auto sm:w-64 drop-shadow-lg"
+            <img
+              src={mozartMouseBear}
+              alt="Mozart Mouse and Beethoven Bear characters"
+              className="w-48 h-auto sm:w-64"
             />
           </div>
 
@@ -51,10 +51,10 @@ const Home = () => {
 
             {/* Group characters image */}
             <div className="flex justify-center py-4">
-              <img 
-                src={groupCharacters} 
-                alt="Little Mozart characters group" 
-                className="w-full max-w-lg h-auto drop-shadow-md"
+              <img
+                src={groupCharacters}
+                alt="Little Mozart characters group"
+                className="w-full max-w-lg h-auto"
               />
             </div>
 
