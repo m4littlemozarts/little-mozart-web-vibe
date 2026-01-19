@@ -3,8 +3,8 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
 import { Music, Heart, Users, MapPin } from "lucide-react";
-import groupCharacters from "@/assets/group-characters.svg";
-import mmbb from "@/assets/mmbb.svg";
+import mmbb from "@/assets/mmbb.png";
+import groupCharacters from "@/assets/group-characters.png";
 const Home = () => {
   return <Layout>
       {/* Hero Section */}
@@ -25,11 +25,11 @@ const Home = () => {
           }} />
           </div>
 
-          {/* Mozart character image */}
+          {/* Mozart Mouse and Beethoven Bear hero image */}
           <div className="mb-8 flex justify-center">
             <img
-              src={groupCharacters}
-              alt="Little Mozart characters group"
+              src={mmbb}
+              alt="Mozart Mouse and Beethoven Bear with magical book"
               className="w-48 h-auto sm:w-64"
             />
           </div>
@@ -52,8 +52,8 @@ const Home = () => {
             {/* Group characters image */}
             <div className="flex justify-center py-4">
               <img
-                src={mmbb}
-                alt="Mozart Mouse and Beethoven Bear characters"
+                src={groupCharacters}
+                alt="Little Mozart characters group"
                 className="w-full max-w-lg h-auto"
               />
             </div>
