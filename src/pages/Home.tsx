@@ -15,7 +15,7 @@ const Home = () => {
             <MusicNote className="w-12 h-16 text-golden animate-float" />
           </div>
           <div className="absolute top-20 right-16 opacity-10">
-            <MusicNote variant="treble" className="w-8 h-16 text-dusty-rose animate-float" style={{
+            <MusicNote variant="eighth" className="w-8 h-16 text-dusty-rose animate-float" style={{
             animationDelay: "1s"
           }} />
           </div>
