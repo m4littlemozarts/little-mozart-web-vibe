@@ -2,25 +2,11 @@ import { CSSProperties } from "react";
 
 interface MusicNoteProps {
   className?: string;
-  variant?: "note" | "treble" | "bass";
+  variant?: "quarter" | "eighth" | "bass";
   style?: CSSProperties;
 }
 
-const MusicNote = ({ className = "", variant = "note", style }: MusicNoteProps) => {
-  if (variant === "treble") {
-    return (
-      <svg
-        viewBox="0 0 24 48"
-        fill="currentColor"
-        className={className}
-        style={style}
-        aria-hidden="true"
-      >
-        <path d="M12 0C12 0 8 8 8 16C8 20 10 22 12 24C10 26 8 30 8 34C8 40 12 44 16 44C20 44 22 40 22 36C22 32 18 30 16 30C14 30 12 32 12 34C12 36 14 38 16 38C15 42 12 42 12 38C12 34 16 32 18 32C20 32 24 34 24 38C24 44 18 48 12 48C6 48 0 44 0 36C0 28 6 24 12 20C10 18 8 16 8 12C8 6 12 0 12 0Z" />
-      </svg>
-    );
-  }
-
+const MusicNote = ({ className = "", variant = "quarter", style }: MusicNoteProps) => {
   if (variant === "bass") {
     return (
       <svg
@@ -38,6 +24,27 @@ const MusicNote = ({ className = "", variant = "note", style }: MusicNoteProps) 
     );
   }
 
+  if (variant === "eighth") {
+    // Eighth note with flag
+    return (
+      <svg
+        viewBox="0 0 24 32"
+        fill="currentColor"
+        className={className}
+        style={style}
+        aria-hidden="true"
+      >
+        {/* Note head - tilted ellipse */}
+        <ellipse cx="8" cy="26" rx="6" ry="4" transform="rotate(-20 8 26)" />
+        {/* Stem */}
+        <rect x="13" y="4" width="2" height="23" />
+        {/* Flag */}
+        <path d="M15 4 Q22 8 18 16 Q20 12 15 10 Z" />
+      </svg>
+    );
+  }
+
+  // Quarter note (default) - clean standard notation
   return (
     <svg
       viewBox="0 0 24 32"
@@ -46,9 +53,10 @@ const MusicNote = ({ className = "", variant = "note", style }: MusicNoteProps) 
       style={style}
       aria-hidden="true"
     >
-      <ellipse cx="8" cy="26" rx="6" ry="5" />
-      <rect x="12" y="4" width="3" height="24" />
-      <path d="M15 4C15 4 22 6 22 12C22 18 15 16 15 16" />
+      {/* Note head - tilted ellipse like real notation */}
+      <ellipse cx="8" cy="26" rx="6" ry="4" transform="rotate(-20 8 26)" />
+      {/* Stem */}
+      <rect x="13" y="4" width="2" height="23" />
     </svg>
   );
 };
