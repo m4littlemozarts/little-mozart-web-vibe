@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Music } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import conductorBear from "@/assets/conductor-bear.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,11 +22,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-golden flex items-center justify-center group-hover:scale-105 transition-transform">
-              <Music className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img
+              src={conductorBear}
+              alt="Conductor Bear"
+              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
+            />
             <span className="font-heading font-bold text-lg sm:text-xl text-foreground hidden sm:block">
-              Music for Little Mozart
+              Music for Little Mozarts
             </span>
           </Link>
 
