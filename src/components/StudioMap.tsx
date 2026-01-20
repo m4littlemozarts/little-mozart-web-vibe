@@ -11,7 +11,7 @@ const StudioMap = () => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
     // Steinway Piano Gallery coordinates
-    const position: L.LatLngExpression = [39.4897, -119.7657];
+    const position: L.LatLngExpression = [39.48995, -119.7686];
 
     // Create map instance
     const map = L.map(mapRef.current).setView(position, 15);
