@@ -87,9 +87,14 @@ const Home = () => {
             <div className="rounded-lg overflow-hidden shadow-md max-w-xl mx-auto">
               <StudioMap />
             </div>
-            <p className="font-body text-sm text-muted-foreground text-center mt-2">
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=500+E+Moana+Ln,+Reno,+NV+89502" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-body text-sm text-muted-foreground text-center mt-2 block hover:text-golden hover:underline transition-colors"
+            >
               500 E Moana Ln, Reno, NV 89502
-            </p>
+            </a>
           </div>
         </div>
       </section>
