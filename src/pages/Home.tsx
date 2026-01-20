@@ -27,11 +27,11 @@ const Home = () => {
 
           {/* Mozart Mouse and Beethoven Bear hero image */}
           <div className="mb-8 flex justify-center">
-            <img
-              src={mmbb}
-              alt="Mozart Mouse and Beethoven Bear with magical book"
-              className="w-48 h-auto sm:w-64"
-            />
+          <img
+            src={mmbb}
+            alt="Mozart Mouse and Beethoven Bear with magical book"
+            className="w-36 h-auto sm:w-48"
+          />
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-in">Music for Little Mozarts</h1>
@@ -54,7 +54,7 @@ const Home = () => {
               <img
                 src={groupCharacters}
                 alt="Little Mozart characters group"
-                className="w-full max-w-lg h-auto"
+                className="w-full max-w-2xl h-auto"
               />
             </div>
 
