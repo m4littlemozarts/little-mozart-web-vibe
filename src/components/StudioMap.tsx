@@ -13,8 +13,8 @@ const StudioMap = () => {
     // Steinway Piano Gallery coordinates
     const position: L.LatLngExpression = [39.492507909608555, -119.79086936470239];
 
-    // Create map instance
-    const map = L.map(mapRef.current).setView(position, 15);
+    // Create map instance with a lower zoom level (zoomed out)
+    const map = L.map(mapRef.current).setView(position, 13); // Changed zoom from 15 to 13
     mapInstanceRef.current = map;
 
     // Add tile layer
