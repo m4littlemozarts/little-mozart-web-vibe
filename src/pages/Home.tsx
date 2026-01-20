@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
-import { Music, Heart, Users, MapPin } from "lucide-react";
+import StudioMap from "@/components/StudioMap";
+import { Heart, MapPin } from "lucide-react";
 import mmbb from "@/assets/mmbb.png";
 import groupCharacters from "@/assets/group-characters.png";
 const Home = () => {
@@ -84,16 +85,7 @@ const Home = () => {
               Classes are held at the Music for Little Mozarts' Studio in the Reno Steinway Piano Gallery.
             </p>
             <div className="rounded-lg overflow-hidden shadow-md max-w-xl mx-auto">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.8123456789!2d-119.7969!3d39.4897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80993f3b8c8c8c8b%3A0x1234567890abcdef!2sSteinway%20Piano%20Gallery!5e0!3m2!1sen!2sus!4v1234567890"
-                width="100%"
-                height="250"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Steinway Piano Gallery Location"
-              ></iframe>
+              <StudioMap />
             </div>
             <p className="font-body text-sm text-muted-foreground text-center mt-2">
               500 E Moana Ln, Reno, NV 89502
