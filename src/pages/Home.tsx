@@ -91,7 +91,7 @@ const Home = () => {
               href="https://www.google.com/maps/search/?api=1&query=500+E+Moana+Ln,+Reno,+NV+89502" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-body text-sm text-muted-foreground text-center mt-2 block underline hover:text-golden hover:underline transition-colors"
+              className="font-body text-base text-muted-foreground text-center mt-2 block underline hover:text-golden hover:underline transition-colors"
             >
               500 E Moana Ln, Reno, NV 89502
             </a>
