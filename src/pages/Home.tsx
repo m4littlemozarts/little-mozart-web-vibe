@@ -30,7 +30,7 @@ const Home = () => {
           <img
             src={mmbb}
             alt="Mozart Mouse and Beethoven Bear with magical book"
-            className="w-36 h-auto sm:w-48"
+            className="w-56 h-auto sm:w-72"
           />
           </div>
 
@@ -54,7 +54,7 @@ const Home = () => {
               <img
                 src={groupCharacters}
                 alt="Little Mozart characters group"
-                className="w-full max-w-2xl h-auto"
+                className="w-full max-w-md h-auto"
               />
             </div>
 
