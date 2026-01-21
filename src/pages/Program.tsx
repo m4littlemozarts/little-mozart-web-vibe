@@ -46,7 +46,6 @@ const Program = () => {
                 </div>
               </div>
             </div>
-            {/* Removed decorative note */}
           </div>
         </div>
       </section>
@@ -66,7 +65,6 @@ const Program = () => {
                 </div>
               </div>
             </div>
-            {/* Removed decorative note */}
           </div>
 
           {/* Text Content (now on the right for md and up) */}
@@ -161,8 +159,7 @@ const Program = () => {
       {/* What to Expect */}
       <section className="section-container">
         <div className="max-w-3xl mx-auto">
-          <h2 className="section-heading text-center">What to Expect in Class</h2>
-          <div className="section-heading-underline mx-auto" />
+          <h2 className="section-heading text-center mb-8">What to Expect in Class</h2>
           
           <div className="paper-card mt-8">
             <ul className="space-y-4">
