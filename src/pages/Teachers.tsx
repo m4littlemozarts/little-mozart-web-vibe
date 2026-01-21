@@ -82,8 +82,8 @@ const Teachers = () => { // Renamed component
   // Placeholder teacher data - YouTube IDs and photos will be added later
   const teachers: TeacherProps[] = [ // Renamed variable
     {
-      name: "Sarah Mitchell",
-      bio: "Sarah has been teaching piano to young children for over 15 years. With a Master's degree in Music Education and specialized training in early childhood development, she brings warmth, patience, and creativity to every lesson. Sarah believes that every child is naturally musical—they just need the right environment to flourish.",
+      name: "Christine H. Barden",
+      bio: "An internationally recognized authority on early childhood music, Christine H. Barden is the composer of _Music for Little Mozarts_ preschool piano method. As well as teaching Music for Little Mozarts classes, she is a piano teacher in Reno, Nevada, where she teaches numerous prize-winning students in piano and composition. A graduate with a degree in piano performance from San Francisco State University, Christine studied with Vladimir Brenner, piano soloist for the NBC Symphony Orchestra. In addition, she spent four years studying, performing, and teaching in Europe. Christine was one of the first teachers from the United States to study with Yamaha Music Foundation instructors in Japan. She subsequently served as a national staff member with Yamaha for 17 years. Her responsibilities included Director of Curriculum and National Chief Instructor for the Yamaha Music Education System. Christine is a pillar of the Reno music community and has been educating local students for over 15 years.",
       youtubeId: "", // Add YouTube video ID here (e.g., "dQw4w9WgXcQ")
       imageUrl: "", // Add image URL here
     },
