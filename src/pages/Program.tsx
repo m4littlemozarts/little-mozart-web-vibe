@@ -16,7 +16,7 @@ const Program = () => {
         </p>
       </section>
 
-      <DecorativeDivider className="mb-8" />
+      <DecorativeDivider className="mb-4" />
 
       {/* Curriculum Overview */}
       <section className="section-container pt-0">
