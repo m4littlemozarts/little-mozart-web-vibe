@@ -54,6 +54,43 @@ const Program = () => {
         </div>
       </section>
 
+      <DecorativeDivider className="my-8" /> {/* Added a divider for separation */}
+
+      {/* Our Cohort Program Section */}
+      <section className="section-container pt-0">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div>
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4">
+              Our Cohort Program
+            </h2>
+            <div className="space-y-4">
+              <p className="font-body text-foreground leading-relaxed">
+                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program lasts approximately two years covering all four book levels through weekly 40 minute classes. There are no more than 8 students in a class and we progress through the books when the students are ready on an individual level. Students have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
+              </p>
+            </div>
+          </div>
+          
+          {/* Placeholder for character illustration (flipped to the right) */}
+          <div className="relative order-first md:order-last"> {/* order-first for mobile, order-last for md and up */}
+            <div className="bg-cream rounded-lg border-2 border-border p-8 text-center">
+              <div className="w-full aspect-square max-w-xs mx-auto bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center">
+                <div className="text-center p-4">
+                  <MusicNote variant="eighth" className="w-16 h-16 text-dusty-rose mx-auto mb-3" />
+                  <p className="font-heading text-sm text-muted-foreground">
+                    Cohort Illustration<br />Placeholder
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Decorative note */}
+            <div className="absolute -bottom-4 -left-4 opacity-20">
+              <MusicNote variant="bass" className="w-10 h-10 text-sage" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="bg-paper border-y-2 border-border">
         <div className="section-container">
