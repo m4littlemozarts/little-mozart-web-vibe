@@ -12,25 +12,20 @@ interface TeacherProps {
 const TeacherCard = ({ name, bio, imageUrl }: TeacherProps) => {
   return (
     <div className="paper-card">
-      <div className="flex flex-col md:flex-row gap-6 items-start">
+      <div className="flex flex-col md:flex-row gap-6 items-center">
         {/* Photo */}
-        <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4">
-          <div className="w-full aspect-[4/3] bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center">
-            {imageUrl ? (
-              <img 
-                src={imageUrl} 
-                alt={name}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            ) : (
-              <div className="text-center p-4">
-                <User className="w-16 h-16 text-golden mx-auto mb-2" />
-                <p className="font-heading text-sm text-muted-foreground">
-                  Teacher Photo
-                </p>
-              </div>
-            )}
-          </div>
+        <div className="flex-shrink-0 flex items-center justify-center w-full md:w-1/3 lg:w-1/4">
+          {imageUrl ? (
+            <img 
+              src={imageUrl} 
+              alt={name}
+              className="w-40 h-40 object-cover rounded-full border-4 border-golden/30 shadow-lg"
+            />
+          ) : (
+            <div className="w-40 h-40 bg-paper rounded-full border-2 border-dashed border-golden/50 flex items-center justify-center">
+              <User className="w-16 h-16 text-golden" />
+            </div>
+          )}
         </div>
         
         {/* Info */}
