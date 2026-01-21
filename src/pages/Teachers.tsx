@@ -1,7 +1,6 @@
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import { User } from "lucide-react";
-import christineBardenImage from "@/assets/christine-barden.png"; // Import the new image
 
 interface TeacherProps {
   name: string;
@@ -52,7 +51,7 @@ const Teachers = () => {
     {
       name: "Christine H. Barden",
       bio: "An internationally recognized authority on early childhood music, Christine H. Barden is the composer of Music for Little Mozarts preschool piano method. As well as teaching Music for Little Mozarts classes, she is a piano teacher in Reno, Nevada, where she teaches numerous prize-winning students in piano and composition. A graduate with a degree in piano performance from San Francisco State University, Christine studied with Vladimir Brenner, piano soloist for the NBC Symphony Orchestra. In addition, she spent four years studying, performing, and teaching in Europe. Christine was one of the first teachers from the United States to study with Yamaha Music Foundation instructors in Japan. She subsequently served as a national staff member with Yamaha for 17 years. Her responsibilities included Director of Curriculum and National Chief Instructor for the Yamaha Music Education System. Christine is a pillar of the Reno music community and has been educating local students for over 15 years.",
-      imageUrl: christineBardenImage, // Use the imported image here
+      imageUrl: "", // Add image URL here
     },
     {
       name: "Michael Chen",
