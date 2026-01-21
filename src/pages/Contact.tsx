@@ -55,7 +55,7 @@ const Contact = () => {
       {/* Hero */}
       <section className="section-container text-center pb-8">
         <h1 className="section-heading text-4xl sm:text-5xl">Contact Us</h1>
-        <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
           We'd love to hear from you! Whether you have questions about our program, 
           want to schedule a visit, or are ready to enroll your little musician, 
           reach out anytime.
