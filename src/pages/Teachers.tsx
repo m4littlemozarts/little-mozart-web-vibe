@@ -63,7 +63,7 @@ const Teachers = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-container text-center">
+      <section className="section-container text-center pb-8">
         <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1>
       </section>
 
