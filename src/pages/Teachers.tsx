@@ -5,18 +5,16 @@ import { User } from "lucide-react";
 interface TeacherProps {
   name: string;
   bio: string;
-  youtubeId?: string;
-  imageUrl?: string;
+  imageUrl?: string; // Removed youtubeId as it's no longer used
 }
 
-const TeacherCard = ({ name, bio, youtubeId, imageUrl }: TeacherProps) => {
+const TeacherCard = ({ name, bio, imageUrl }: TeacherProps) => {
   return (
     <div className="paper-card">
-      <div className="grid md:grid-cols-2 gap-6">
-        {/* Image and Info */}
-        <div>
-          {/* Photo placeholder */}
-          <div className="w-full aspect-[4/3] bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center mb-4">
+      <div className="flex flex-col md:flex-row gap-6 items-start">
+        {/* Photo */}
+        <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4">
+          <div className="w-full aspect-[4/3] bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center">
             {imageUrl ? (
               <img 
                 src={imageUrl} 
@@ -32,7 +30,10 @@ const TeacherCard = ({ name, bio, youtubeId, imageUrl }: TeacherProps) => {
               </div>
             )}
           </div>
-          
+        </div>
+        
+        {/* Info */}
+        <div className="flex-1">
           <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
             {name}
           </h3>
@@ -40,57 +41,21 @@ const TeacherCard = ({ name, bio, youtubeId, imageUrl }: TeacherProps) => {
             {bio}
           </p>
         </div>
-
-        {/* YouTube Video Embed */}
-        <div>
-          {youtubeId ? (
-            <div className="w-full aspect-video rounded-lg overflow-hidden border-2 border-border bg-cream">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${youtubeId}`}
-                title={`${name} - Introduction Video`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="border-0"
-              />
-            </div>
-          ) : (
-            <div className="w-full aspect-video rounded-lg bg-paper border-2 border-dashed border-golden/50 flex items-center justify-center">
-              <div className="text-center p-4">
-                <div className="w-16 h-16 rounded-full bg-golden/20 flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-8 h-8 text-golden" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="font-heading text-sm text-muted-foreground">
-                  Introduction Video<br />Coming Soon
-                </p>
-              </div>
-            </div>
-          )}
-          <p className="font-body text-sm text-muted-foreground mt-2 text-center">
-            Watch {name.split(' ')[0]}'s introduction
-          </p>
-        </div>
       </div>
     </div>
   );
 };
 
-const Teachers = () => { // Renamed component
-  // Placeholder teacher data - YouTube IDs and photos will be added later
-  const teachers: TeacherProps[] = [ // Renamed variable
+const Teachers = () => {
+  const teachers: TeacherProps[] = [
     {
       name: "Christine H. Barden",
       bio: "An internationally recognized authority on early childhood music, Christine H. Barden is the composer of _Music for Little Mozarts_ preschool piano method. As well as teaching Music for Little Mozarts classes, she is a piano teacher in Reno, Nevada, where she teaches numerous prize-winning students in piano and composition. A graduate with a degree in piano performance from San Francisco State University, Christine studied with Vladimir Brenner, piano soloist for the NBC Symphony Orchestra. In addition, she spent four years studying, performing, and teaching in Europe. Christine was one of the first teachers from the United States to study with Yamaha Music Foundation instructors in Japan. She subsequently served as a national staff member with Yamaha for 17 years. Her responsibilities included Director of Curriculum and National Chief Instructor for the Yamaha Music Education System. Christine is a pillar of the Reno music community and has been educating local students for over 15 years.",
-      youtubeId: "", // Add YouTube video ID here (e.g., "dQw4w9WgXcQ")
       imageUrl: "", // Add image URL here
     },
     {
       name: "Michael Chen",
       bio: "Michael discovered his passion for teaching while studying piano performance at the San Francisco Conservatory. His gentle approach and ability to connect with young learners has made him a favorite among families. When not teaching, Michael composes children's songs and performs with the local symphony.",
-      youtubeId: "", // Add YouTube video ID here
       imageUrl: "", // Add image URL here
     },
   ];
@@ -99,7 +64,7 @@ const Teachers = () => { // Renamed component
     <Layout>
       {/* Hero */}
       <section className="section-container text-center">
-        <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1> {/* Updated text */}
+        <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1>
         <div className="section-heading-underline mx-auto" />
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
           Our teachers are passionate educators with specialized training in 
@@ -113,8 +78,8 @@ const Teachers = () => { // Renamed component
       {/* Teacher Cards */}
       <section className="section-container pt-0">
         <div className="space-y-12">
-          {teachers.map((teacher, index) => ( // Updated variable and component
-            <TeacherCard key={index} {...teacher} /> // Updated component
+          {teachers.map((teacher, index) => (
+            <TeacherCard key={index} {...teacher} />
           ))}
         </div>
       </section>
@@ -133,4 +98,4 @@ const Teachers = () => { // Renamed component
   );
 };
 
-export default Teachers; // Renamed export
+export default Teachers;
