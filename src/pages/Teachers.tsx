@@ -52,8 +52,8 @@ const Teachers = () => {
       imageUrl: christineBarden,
     },
     {
-      name: "Michael Chen",
-      bio: "Michael discovered his passion for teaching while studying piano performance at the San Francisco Conservatory. His gentle approach and ability to connect with young learners has made him a favorite among families. When not teaching, Michael composes children's songs and performs with the local symphony.",
+      name: "Michael Britten", // Changed name
+      bio: "this bio isn't finished, I'm still working on it.", // Changed bio
       imageUrl: "", // Add image URL here
     },
   ];
