@@ -82,7 +82,7 @@ const Home = () => {
           {/* Map Section */}
           <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <p className="font-body text-muted-foreground text-center mb-4">
-              Classes are held at the Music for Little Mozarts Studio in the Reno Steinway Piano Gallery.
+              Classes are held at the Music for Little Mozarts Studio in the Steinway Piano Gallery of Reno, NV.
             </p>
             <div className="rounded-lg overflow-hidden shadow-md max-w-xl mx-auto">
               <StudioMap />
