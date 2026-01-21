@@ -28,20 +28,10 @@ const Program = () => {
             </h2>
             <div className="space-y-4">
               <p className="font-body text-foreground leading-relaxed">
-                <em>Music for Little Mozarts</em> is a nationally recognized piano 
-                curriculum developed by Christine H. Barden, Gayle Kowalchyk, and 
-                E. L. Lancaster. It's designed to nurture both the musical abilities 
-                and the imagination of children ages 4-6.
+                The Music for little Mozarts Program guides students through the fundamentals of piano and music by interweaving sight reading and singing, rhythmic recall, and piano technique with play, dance and exploration. Friendly characters such as Beethoven Bear and Mozart Mouse anchor student's learning through narrative based adventure.
               </p>
               <p className="font-body text-foreground leading-relaxed">
-                Through beloved characters like Mozart Mouse, Beethoven Bear, and 
-                their friends, children are introduced to music concepts in a playful, 
-                story-driven way that feels like an adventure rather than a lesson.
-              </p>
-              <p className="font-body text-foreground leading-relaxed">
-                Each class combines singing, rhythm activities, ear training, and 
-                age-appropriate piano technique—building a strong foundation that 
-                will serve young musicians for years to come.
+                The Music for Little Mozarts curriculum was developed by Christine H. Barden, the director here at the Reno Steinway Piano Gallery. She is the composer and mastermind behind the program. First published in 1998, Music for little Mozarts classes are taught across the country and abroad. The organic longevity of the program is a testament to its effectiveness and the joy it brings students, parents and teachers.
               </p>
             </div>
           </div>
