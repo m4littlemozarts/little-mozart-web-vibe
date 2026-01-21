@@ -28,7 +28,7 @@ const Program = () => {
             </h2>
             <div className="space-y-4">
               <p className="font-body text-foreground leading-relaxed">
-                The Music for little Mozarts Program guides students through the fundamentals of piano and music by interweaving sight reading and singing, rhythmic recall, and piano technique with play, dance and exploration. Friendly characters such as Beethoven Bear and Mozart Mouse anchor student's learning through narrative based adventure.
+                The Music for little Mozarts Program guides students through the fundamentals of piano and music by interweaving sight reading and singing, rhythmic recall, and piano technique with play, dance and exploration. Friendly characters such as Beethoven Bear and Mozart Mouse anchor student's learning through story based adventure.
               </p>
               <p className="font-body text-foreground leading-relaxed">
                 The Music for Little Mozarts curriculum was developed by Christine H. Barden, the director here at the Reno Steinway Piano Gallery. She is the composer and mastermind behind the program. First published in 1998, Music for little Mozarts classes are taught across the country and abroad. The organic longevity of the program is a testament to its effectiveness and the joy it brings students, parents and teachers.
