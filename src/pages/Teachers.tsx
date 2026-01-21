@@ -67,9 +67,9 @@ const Teachers = () => {
         <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1>
       </section>
 
-      <DecorativeDivider className="my-3" /> {/* Changed my-12 to my-3 */}
+      <DecorativeDivider className="my-12" /> {/* Changed mb-12 to my-12 */}
 
-      <section className="section-container pt-0">
+      <section className="section-container"> {/* Removed pt-0 */}
         <div className="space-y-12">
           {teachers.map((teacher, index) => (
             <TeacherCard key={index} {...teacher} />
