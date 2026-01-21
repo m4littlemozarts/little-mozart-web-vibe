@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Music, MapPin, Mail } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
+import conductorBear from "@/assets/conductor-bear.png";
 
 const Footer = () => {
   return (
@@ -9,9 +10,11 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-golden flex items-center justify-center">
-                <Music className="w-4 h-4 text-primary-foreground" />
-              </div>
+<img
+                src={conductorBear}
+                alt="Conductor Bear"
+                className="w-10 h-10 object-contain"
+              />
               <span className="font-heading font-bold text-foreground">
                 Music for Little Mozart
               </span>
