@@ -8,18 +8,18 @@ const Program = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-container text-center pb-0"> {/* Changed pb-8 to pb-0 */}
+      <section className="section-container text-center pb-0">
         <h1 className="section-heading text-4xl sm:text-5xl">About Our Program</h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-7">
           The Music for Little Mozarts curriculum is meticulously orchestrated to bring your child into the world of music.
         </p>
       </section>
 
-      <DecorativeDivider className="mb-8" /> {/* Kept this divider after the hero */}
+      <DecorativeDivider className="mb-8" />
 
       {/* Curriculum Overview */}
       <section className="section-container pt-0">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start */}
           <div>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4">
               The Little Mozarts Curriculum
@@ -51,10 +51,10 @@ const Program = () => {
       </section>
 
       {/* Our Cohort Program Section */}
-      <section className="section-container pt-12"> {/* Adjusted padding-top */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="section-container pt-8"> {/* Reduced pt-12 to pt-8 for less space */}
+        <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start */}
           {/* Placeholder for character illustration (now on the left for md and up) */}
-          <div className="relative"> {/* Removed order-first md:order-last */}
+          <div className="relative">
             <div className="bg-cream rounded-lg border-2 border-border p-8 text-center">
               <div className="w-full aspect-square max-w-xs mx-auto bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center">
                 <div className="text-center p-4">
@@ -82,7 +82,7 @@ const Program = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-paper border-y-2 border-border mt-12"> {/* Adjusted margin-top */}
+      <section className="bg-paper border-y-2 border-border mt-12">
         <div className="section-container">
           <h2 className="section-heading text-center">Benefits of Early Music Education</h2>
           
