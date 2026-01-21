@@ -5,7 +5,7 @@ import { User } from "lucide-react";
 interface TeacherProps {
   name: string;
   bio: string;
-  imageUrl?: string; // Removed youtubeId as it's no longer used
+  imageUrl?: string;
 }
 
 const TeacherCard = ({ name, bio, imageUrl }: TeacherProps) => {
@@ -65,12 +65,8 @@ const Teachers = () => {
       {/* Hero */}
       <section className="section-container text-center">
         <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1>
-        <div className="section-heading-underline mx-auto" />
-        <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-          Our teachers are passionate educators with specialized training in 
-          early childhood music education. They create a nurturing, joyful environment 
-          where young musicians can thrive.
-        </p>
+        {/* Removed the section-heading-underline */}
+        {/* Removed the descriptive paragraph */}
       </section>
 
       <DecorativeDivider className="mb-12" />
