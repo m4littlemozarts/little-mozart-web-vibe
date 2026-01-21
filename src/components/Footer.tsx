@@ -89,7 +89,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-10 pt-6 border-t border-border text-center">
           <p className="font-body text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Music for Little Mozart. Made with ♪ in Reno, Nevada.
+            Made with ♪ in Reno, Nevada.
           </p>
         </div>
       </div>
