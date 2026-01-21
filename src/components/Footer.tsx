@@ -69,8 +69,7 @@ const Footer = () => {
                     rel="noopener noreferrer" 
                     className="hover:underline hover:text-golden transition-colors"
                   >
-                    Steinway Piano Gallery of Reno, NV<br />
-                    500 E Moana Ln, Reno, NV 89502
+                    Steinway Piano Gallery of Reno, NV
                   </a>
                 </p>
               </div>
