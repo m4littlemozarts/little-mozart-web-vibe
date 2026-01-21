@@ -80,8 +80,8 @@ const Program = () => {
             
             {/* New Cohort Announcement */}
             <div className="paper-card text-center py-6 px-4 max-w-md mx-auto">
-              <h3 className="font-heading text-lg sm:text-xl font-bold text-golden"> {/* Changed text-xl sm:text-2xl to text-lg sm:text-xl */}
-                Our next Music for Little Mozarts cohort begins March 2026!
+              <h3 className="font-heading text-lg sm:text-xl font-bold text-golden">
+                Our next Music for Little Mozarts Cohort begins March 2026!
               </h3>
             </div>
           </div>
