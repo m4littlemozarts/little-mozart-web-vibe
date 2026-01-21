@@ -16,14 +16,16 @@ const TeacherCard = ({ name, bio, imageUrl }: TeacherProps) => {
         {/* Photo */}
         <div className="flex-shrink-0 flex items-center justify-center w-full md:w-1/3 lg:w-1/4">
           {imageUrl ? (
-            <img 
-              src={imageUrl} 
-              alt={name}
-              className="w-40 h-40 object-cover rounded-full border-4 border-golden/30 shadow-lg"
-            />
+            <div className="w-56 h-56 rounded-full bg-background border-2 border-border shadow-md flex items-center justify-center overflow-hidden">
+              <img 
+                src={imageUrl} 
+                alt={name}
+                className="w-full h-full object-cover"
+              />
+            </div>
           ) : (
-            <div className="w-40 h-40 bg-paper rounded-full border-2 border-dashed border-golden/50 flex items-center justify-center">
-              <User className="w-16 h-16 text-golden" />
+            <div className="w-56 h-56 bg-background rounded-full border-2 border-border shadow-md flex items-center justify-center">
+              <User className="w-20 h-20 text-golden" />
             </div>
           )}
         </div>
