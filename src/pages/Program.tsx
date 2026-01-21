@@ -8,14 +8,14 @@ const Program = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-container text-center pb-8">
+      <section className="section-container text-center pb-0"> {/* Changed pb-8 to pb-0 */}
         <h1 className="section-heading text-4xl sm:text-5xl">About Our Program</h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-7">
           The Music for Little Mozarts curriculum is meticulously orchestrated to bring your child into the world of music.
         </p>
       </section>
 
-      <DecorativeDivider className="mb-8" />
+      <DecorativeDivider className="mb-8" /> {/* Kept this divider after the hero */}
 
       {/* Curriculum Overview */}
       <section className="section-container pt-0">
@@ -46,33 +46,16 @@ const Program = () => {
                 </div>
               </div>
             </div>
-            {/* Decorative note */}
-            <div className="absolute -top-4 -right-4 opacity-20">
-              <MusicNote className="w-10 h-14 text-golden" />
-            </div>
+            {/* Removed decorative note */}
           </div>
         </div>
       </section>
 
-      <DecorativeDivider className="my-8" /> {/* Added a divider for separation */}
-
       {/* Our Cohort Program Section */}
-      <section className="section-container pt-0">
+      <section className="section-container pt-12"> {/* Adjusted padding-top */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div>
-            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4">
-              Our Cohort Program
-            </h2>
-            <div className="space-y-4">
-              <p className="font-body text-foreground leading-relaxed">
-                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program lasts approximately two years covering all four book levels through weekly 40 minute classes. There are no more than 8 students in a class and we progress through the books when the students are ready on an individual level. Students have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
-              </p>
-            </div>
-          </div>
-          
-          {/* Placeholder for character illustration (flipped to the right) */}
-          <div className="relative order-first md:order-last"> {/* order-first for mobile, order-last for md and up */}
+          {/* Placeholder for character illustration (now on the left for md and up) */}
+          <div className="relative"> {/* Removed order-first md:order-last */}
             <div className="bg-cream rounded-lg border-2 border-border p-8 text-center">
               <div className="w-full aspect-square max-w-xs mx-auto bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center">
                 <div className="text-center p-4">
@@ -83,16 +66,25 @@ const Program = () => {
                 </div>
               </div>
             </div>
-            {/* Decorative note */}
-            <div className="absolute -bottom-4 -left-4 opacity-20">
-              <MusicNote variant="bass" className="w-10 h-10 text-sage" />
+            {/* Removed decorative note */}
+          </div>
+
+          {/* Text Content (now on the right for md and up) */}
+          <div>
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4">
+              Our Cohort Program
+            </h2>
+            <div className="space-y-4">
+              <p className="font-body text-foreground leading-relaxed">
+                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program lasts approximately two years covering all four book levels through weekly 40 minute classes. There are no more than 8 students in a class and we progress through the books when the students are ready on an individual level. Students have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-paper border-y-2 border-border">
+      <section className="bg-paper border-y-2 border-border mt-12"> {/* Adjusted margin-top */}
         <div className="section-container">
           <h2 className="section-heading text-center">Benefits of Early Music Education</h2>
           
