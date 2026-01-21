@@ -65,8 +65,6 @@ const Teachers = () => {
       {/* Hero */}
       <section className="section-container text-center">
         <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1>
-        {/* Removed the section-heading-underline */}
-        {/* Removed the descriptive paragraph */}
       </section>
 
       <DecorativeDivider className="mb-12" />
@@ -77,17 +75,6 @@ const Teachers = () => {
           {teachers.map((teacher, index) => (
             <TeacherCard key={index} {...teacher} />
           ))}
-        </div>
-      </section>
-
-      {/* Note about adding more */}
-      <section className="section-container pt-0">
-        <div className="bg-cream rounded-lg border-2 border-border p-6 text-center max-w-2xl mx-auto">
-          <p className="font-body text-muted-foreground italic">
-            More teacher profiles and videos coming soon! Check back for updates 
-            or <a href="/contact" className="text-golden hover:underline">contact us</a> to 
-            learn more about our teaching team.
-          </p>
         </div>
       </section>
     </Layout>
