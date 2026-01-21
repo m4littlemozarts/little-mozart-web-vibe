@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
-import { BookOpen, Music2, Sparkles, GraduationCap } from "lucide-react";
+import { BookOpen, Music2, Brain, Focus } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Program = () => {
@@ -60,65 +60,71 @@ const Program = () => {
         <div className="section-container">
           <h2 className="section-heading text-center">Benefits of Early Music Education</h2>
           
-          <div className="grid sm:grid-cols-2 gap-6 mt-10">
-            <div className="paper-card flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-dusty-rose/30 flex items-center justify-center flex-shrink-0">
-                <Sparkles className="w-6 h-6 text-dusty-rose" />
-              </div>
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
-                  Cognitive Development
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            <div className="paper-card flex flex-col gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-dusty-rose/30 flex items-center justify-center flex-shrink-0">
+                  <Brain className="w-6 h-6 text-dusty-rose" />
+                </div>
+                <h3 className="font-heading text-lg font-semibold text-foreground">
+                  Brain Development & Executive Function
                 </h3>
-                <p className="font-body text-muted-foreground text-sm">
-                  Music training enhances memory, attention, and problem-solving skills 
-                  during critical early brain development years.
-                </p>
               </div>
+              <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                "Music training has a positive effect on inhibitory control, working memory, and cognitive flexibility in preschool children aged 3–6 years. Children's music training groups showed significantly improved inhibitory control, working memory, and cognitive flexibility in comparison with control groups."
+              </p>
+              <a 
+                href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1522962/full" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
+              >
+                Frontiers in Psychology, 2024
+              </a>
             </div>
 
-            <div className="paper-card flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center flex-shrink-0">
-                <BookOpen className="w-6 h-6 text-sage" />
-              </div>
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
-                  Language & Literacy
+            <div className="paper-card flex flex-col gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center flex-shrink-0">
+                  <Focus className="w-6 h-6 text-sage" />
+                </div>
+                <h3 className="font-heading text-lg font-semibold text-foreground">
+                  Attention & Focus
                 </h3>
-                <p className="font-body text-muted-foreground text-sm">
-                  Rhythm and melody recognition strengthens phonemic awareness, 
-                  supporting reading readiness.
-                </p>
               </div>
+              <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                "Rhythmic patterns drive attention focus, and musical elements such as rhythm, melody, and harmony provide multidimensional stimuli that facilitate switching attention. The results indicated significant improvement in attention control following the music intervention."
+              </p>
+              <a 
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7393235/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
+              >
+                Frontiers in Neuroscience, 2020
+              </a>
             </div>
 
-            <div className="paper-card flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-golden/30 flex items-center justify-center flex-shrink-0">
-                <Music2 className="w-6 h-6 text-golden" />
-              </div>
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
-                  Motor Skills
+            <div className="paper-card flex flex-col gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-golden/30 flex items-center justify-center flex-shrink-0">
+                  <BookOpen className="w-6 h-6 text-golden" />
+                </div>
+                <h3 className="font-heading text-lg font-semibold text-foreground">
+                  Language & Reading Skills
                 </h3>
-                <p className="font-body text-muted-foreground text-sm">
-                  Piano playing develops fine motor coordination and the connection 
-                  between hands, eyes, and ears.
-                </p>
               </div>
-            </div>
-
-            <div className="paper-card flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center flex-shrink-0">
-                <GraduationCap className="w-6 h-6 text-dusty-rose" />
-              </div>
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
-                  Confidence & Expression
-                </h3>
-                <p className="font-body text-muted-foreground text-sm">
-                  Performing builds self-esteem while music provides a healthy 
-                  outlet for emotional expression.
-                </p>
-              </div>
+              <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                "The fine-tuning of their auditory pathway could accelerate their development of language and reading, as well as other abilities. Within two years of the study, the neuroscientists found the auditory systems of children in the music program were maturing faster than in the other children."
+              </p>
+              <a 
+                href="https://today.usc.edu/childrens-brains-develop-faster-with-music-training/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
+              >
+                USC Brain and Creativity Institute
+              </a>
             </div>
           </div>
         </div>
