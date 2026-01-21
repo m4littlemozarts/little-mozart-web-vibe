@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-<img
+              <img
                 src={conductorBear}
                 alt="Conductor Bear"
                 className="w-10 h-10 object-contain"
@@ -42,7 +42,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/teachers" className="font-body text-muted-foreground hover:text-golden transition-colors text-sm"> {/* Updated link */}
+                <Link to="/teachers" className="font-body text-muted-foreground hover:text-golden transition-colors text-sm">
                   Meet Our Teachers
                 </Link>
               </li>
@@ -63,8 +63,15 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-golden mt-0.5 flex-shrink-0" />
                 <p className="font-body text-muted-foreground text-sm">
-                  Steinway Gallery<br />
-                  Reno, Nevada
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=500+E+Moana+Ln,+Reno,+NV+89502" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:underline hover:text-golden transition-colors"
+                  >
+                    Steinway Piano Gallery of Reno, NV<br />
+                    500 E Moana Ln, Reno, NV 89502
+                  </a>
                 </p>
               </div>
               <div className="flex items-center gap-2">
