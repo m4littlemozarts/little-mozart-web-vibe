@@ -11,8 +11,7 @@ const Program = () => {
       <section className="section-container text-center pb-8">
         <h1 className="section-heading text-4xl sm:text-5xl">About Our Program</h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-7">
-          The Music for Little Mozarts curriculum is a carefully crafted journey 
-          into the world of music, designed specifically for young children.
+          The Music for Little Mozarts curriculum is meticulously orchestrated to bring your child into the world of music.
         </p>
       </section>
 
