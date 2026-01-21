@@ -10,7 +10,7 @@ const Program = () => {
       {/* Hero */}
       <section className="section-container text-center">
         <h1 className="section-heading text-4xl sm:text-5xl">About Our Program</h1>
-        <div className="section-heading-underline mx-auto" />
+        {/* Removed the section-heading-underline */}
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
           The Music for Little Mozarts curriculum is a carefully crafted journey 
           into the world of music, designed specifically for young children.
@@ -60,7 +60,7 @@ const Program = () => {
       <section className="bg-paper border-y-2 border-border">
         <div className="section-container">
           <h2 className="section-heading text-center">Benefits of Early Music Education</h2>
-          <div className="section-heading-underline mx-auto" />
+          {/* Removed the section-heading-underline */}
           
           <div className="grid sm:grid-cols-2 gap-6 mt-10">
             <div className="paper-card flex gap-4">
