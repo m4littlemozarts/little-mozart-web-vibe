@@ -72,16 +72,16 @@ const Program = () => {
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4">
               Our Cohort Program
             </h2>
-            <div className="space-y-4 mb-8"> {/* Added mb-8 for spacing before the new title */}
+            <div className="space-y-4 mb-8">
               <p className="font-body text-foreground leading-relaxed">
                 Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program lasts approximately two years covering all four book levels through weekly 40 minute classes. There are no more than 8 students in a class and we progress through the books when the students are ready on an individual level. Students have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
               </p>
             </div>
             
             {/* New Cohort Announcement */}
-            <div className="paper-card text-center py-6 px-4 max-w-md mx-auto"> {/* Added max-w-md and mx-auto for centering and width */}
-              <h3 className="font-heading text-xl sm:text-2xl font-bold text-golden">
-                Our next Little Mozart's cohort begins March 2026
+            <div className="paper-card text-center py-6 px-4 max-w-md mx-auto">
+              <h3 className="font-heading text-lg sm:text-xl font-bold text-golden"> {/* Changed text-xl sm:text-2xl to text-lg sm:text-xl */}
+                Our next Music for Little Mozarts cohort begins March 2026!
               </h3>
             </div>
           </div>
