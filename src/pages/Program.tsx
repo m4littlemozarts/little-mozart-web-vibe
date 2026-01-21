@@ -54,53 +54,6 @@ const Program = () => {
         </div>
       </section>
 
-      {/* What to Expect */}
-      <section className="section-container">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="section-heading text-center mb-4">What to Expect in Class</h2>
-          
-          <div className="paper-card mt-8">
-            <ul className="space-y-4">
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Singing and Movement:</strong> Songs 
-                  and finger plays that make learning music theory feel like play.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Rhythm Activities:</strong> Clapping, 
-                  tapping, and moving to internalize beat and rhythm patterns.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Keyboard Exploration:</strong> Gentle 
-                  introduction to the piano with age-appropriate technique.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Ear Training:</strong> Games that develop 
-                  the ability to recognize pitches, dynamics, and musical patterns.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Story Time:</strong> Adventures with 
-                  Mozart Mouse and friends that teach musical concepts through narrative.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="bg-paper border-y-2 border-border">
         <div className="section-container">
@@ -172,6 +125,54 @@ const Program = () => {
                 USC Brain and Creativity Institute
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What to Expect */}
+      <section className="section-container">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="section-heading text-center">What to Expect in Class</h2>
+          <div className="section-heading-underline mx-auto" />
+          
+          <div className="paper-card mt-8">
+            <ul className="space-y-4">
+              <li className="flex gap-3">
+                <span className="text-golden font-heading font-bold">♪</span>
+                <span className="font-body text-foreground">
+                  <strong className="font-semibold">Singing and Movement:</strong> Songs 
+                  and finger plays that make learning music theory feel like play.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-golden font-heading font-bold">♪</span>
+                <span className="font-body text-foreground">
+                  <strong className="font-semibold">Rhythm Activities:</strong> Clapping, 
+                  tapping, and moving to internalize beat and rhythm patterns.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-golden font-heading font-bold">♪</span>
+                <span className="font-body text-foreground">
+                  <strong className="font-semibold">Keyboard Exploration:</strong> Gentle 
+                  introduction to the piano with age-appropriate technique.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-golden font-heading font-bold">♪</span>
+                <span className="font-body text-foreground">
+                  <strong className="font-semibold">Ear Training:</strong> Games that develop 
+                  the ability to recognize pitches, dynamics, and musical patterns.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-golden font-heading font-bold">♪</span>
+                <span className="font-body text-foreground">
+                  <strong className="font-semibold">Story Time:</strong> Adventures with 
+                  Mozart Mouse and friends that teach musical concepts through narrative.
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
