@@ -1,8 +1,9 @@
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
-import MusicNote from "@/components/MusicNote";
-import { BookOpen, Music2, Brain, Focus } from "lucide-react";
+import { BookOpen, Brain, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
+import dancingHippoMouseBear from "@/assets/dancing-hippo-mouse-bear.png";
+import penguinWriting from "@/assets/penguin-writing.png";
 
 const Program = () => {
   return (
@@ -34,37 +35,27 @@ const Program = () => {
             </div>
           </div>
           
-          {/* Placeholder for character illustration */}
-          <div className="relative">
-            <div className="bg-cream rounded-lg border-2 border-border p-8 text-center">
-              <div className="w-full aspect-square max-w-xs mx-auto bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <Music2 className="w-16 h-16 text-golden mx-auto mb-3" />
-                  <p className="font-heading text-sm text-muted-foreground">
-                    Little Mozart Character<br />Illustration Placeholder
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Character illustration */}
+          <div className="relative flex items-center justify-center">
+            <img 
+              src={dancingHippoMouseBear} 
+              alt="Dancing Hippo, Mouse and Bear characters" 
+              className="w-full max-w-sm drop-shadow-lg"
+            />
           </div>
         </div>
       </section>
 
       {/* Our Cohort Program Section */}
       <section className="section-container pt-8">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Placeholder for character illustration (now on the left for md and up) */}
-          <div className="relative">
-            <div className="bg-cream rounded-lg border-2 border-border p-8 text-center">
-              <div className="w-full aspect-square max-w-xs mx-auto bg-paper rounded-lg border-2 border-dashed border-golden/50 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <MusicNote variant="eighth" className="w-16 h-16 text-dusty-rose mx-auto mb-3" />
-                  <p className="font-heading text-sm text-muted-foreground">
-                    Cohort Illustration<br />Placeholder
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Character illustration */}
+          <div className="relative flex items-center justify-center">
+            <img 
+              src={penguinWriting} 
+              alt="Penguin writing with a quill" 
+              className="w-full max-w-xs drop-shadow-lg"
+            />
           </div>
 
           {/* Text Content (now on the right for md and up) */}
@@ -119,7 +110,7 @@ const Program = () => {
             <div className="paper-card flex flex-col gap-4">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center flex-shrink-0">
-                  <Focus className="w-6 h-6 text-sage" />
+                  <Eye className="w-6 h-6 text-sage" />
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground">
                   Attention & Focus
