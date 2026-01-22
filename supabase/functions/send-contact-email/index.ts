@@ -1,4 +1,4 @@
-import { Resend } from "resend/mod.ts";
+import { Resend } from "resend"; // Changed from "resend/mod.ts"
 
 // Define CORS headers for the Edge Function
 const CORS_HEADERS = {
