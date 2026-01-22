@@ -4,6 +4,8 @@ import { BookOpen, Brain, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import dancingHippoMouseBear from "@/assets/dancing-hippo-mouse-bear.png";
 import penguinWriting from "@/assets/penguin-writing.png";
+import mmPlushie from "@/assets/mm-plushie.png";
+import bbPlushie from "@/assets/bb-plushie.png";
 
 const Program = () => {
   return (
@@ -159,39 +161,55 @@ const Program = () => {
         <div className="max-w-3xl mx-auto">
           <h2 className="section-heading text-center mb-8">What to Expect in Class</h2>
           
-          <div className="paper-card mt-8">
-            <ul className="space-y-4">
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Parental Participation:</strong> Classes are a place for students and parents to explore the joys of music together. Parents join in singing and dancing activities and help keep students on track while learning at the keyboard. No musical background needed, you'll learn everything necessary to support your child's success through the class.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Keyboard Exploration:</strong> Students learn and play fun songs together that progressively build their piano technique. The Music for Little Mozart curriculum has been developing young pianists for over 20 years.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Singing, Dancing and Movement Activities:</strong> Fun and energetic musical activities keep students engaged and lay the foundations to develop a deeper understanding of music. Expect to sing, dance and play along.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Work Book and Flashcards:</strong> Musical concepts are reinforced with fun coloring exercises and group flash cards. Students build confidence as they recognize and apply musical concepts.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-golden font-heading font-bold">♪</span>
-                <span className="font-body text-foreground">
-                  <strong className="font-semibold">Music Friend Helpers:</strong> Classes center on the adventures of the lovable characters Beethoven Bear and Mozart Mouse as they learn about music. Every student gets their own plushie music friends to help them learn and practice.
-                </span>
-              </li>
-            </ul>
+          <div className="relative flex items-center justify-center mt-8">
+            {/* Mozart Mouse Plushie - Left */}
+            <img 
+              src={mmPlushie} 
+              alt="Mozart Mouse plushie" 
+              className="hidden md:block absolute -left-32 lg:-left-40 h-40 lg:h-48 w-auto drop-shadow-lg"
+            />
+            
+            <div className="paper-card">
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <span className="text-golden font-heading font-bold">♪</span>
+                  <span className="font-body text-foreground">
+                    <strong className="font-semibold">Parental Participation:</strong> Classes are a place for students and parents to explore the joys of music together. Parents join in singing and dancing activities and help keep students on track while learning at the keyboard. No musical background needed, you'll learn everything necessary to support your child's success through the class.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-golden font-heading font-bold">♪</span>
+                  <span className="font-body text-foreground">
+                    <strong className="font-semibold">Keyboard Exploration:</strong> Students learn and play fun songs together that progressively build their piano technique. The Music for Little Mozart curriculum has been developing young pianists for over 20 years.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-golden font-heading font-bold">♪</span>
+                  <span className="font-body text-foreground">
+                    <strong className="font-semibold">Singing, Dancing and Movement Activities:</strong> Fun and energetic musical activities keep students engaged and lay the foundations to develop a deeper understanding of music. Expect to sing, dance and play along.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-golden font-heading font-bold">♪</span>
+                  <span className="font-body text-foreground">
+                    <strong className="font-semibold">Work Book and Flashcards:</strong> Musical concepts are reinforced with fun coloring exercises and group flash cards. Students build confidence as they recognize and apply musical concepts.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-golden font-heading font-bold">♪</span>
+                  <span className="font-body text-foreground">
+                    <strong className="font-semibold">Music Friend Helpers:</strong> Classes center on the adventures of the lovable characters Beethoven Bear and Mozart Mouse as they learn about music. Every student gets their own plushie music friends to help them learn and practice.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Beethoven Bear Plushie - Right */}
+            <img 
+              src={bbPlushie} 
+              alt="Beethoven Bear plushie" 
+              className="hidden md:block absolute -right-32 lg:-right-40 h-40 lg:h-48 w-auto drop-shadow-lg"
+            />
           </div>
         </div>
       </section>
