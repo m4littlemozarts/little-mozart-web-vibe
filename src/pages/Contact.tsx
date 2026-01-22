@@ -3,6 +3,9 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react";
 import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner"; // Using sonner for toast notifications
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -13,41 +16,49 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contact = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
-  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (errors[name as keyof ContactFormData]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }));
-    }
-  };
+  const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate form
-    const result = contactSchema.safeParse(formData);
-    
-    if (!result.success) {
-      const fieldErrors: Partial<ContactFormData> = {};
-      result.error.errors.forEach((error) => {
-        const field = error.path[0] as keyof ContactFormData;
-        fieldErrors[field] = error.message;
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmittedSuccessfully(false); // Reset submission status on new attempt
+
+    try {
+      const response = await fetch("http://localhost:54321/functions/v1/send-contact-email", { // Adjust URL for production
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
-      setErrors(fieldErrors);
-      return;
-    }
 
-    // Form is valid - in a real app, this would send to a backend
-    setIsSubmitted(true);
+      const result = await response.json();
+
+      if (!response.ok) {
+        const errorMessage = result.error?.message || "Failed to send message. Please try again.";
+        toast.error(errorMessage);
+        return;
+      }
+
+      toast.success("Your message has been sent successfully!");
+      setIsSubmittedSuccessfully(true);
+      reset(); // Clear form fields only on successful submission
+    } catch (error) {
+      console.error("Network or unexpected error:", error);
+      toast.error("Could not connect to the server. Please check your internet connection and try again.");
+    }
   };
 
   return (
@@ -72,7 +83,7 @@ const Contact = () => {
               Send Us a Message
             </h2>
 
-            {isSubmitted ? (
+            {isSubmittedSuccessfully ? (
               <div className="paper-card text-center py-12">
                 <CheckCircle className="w-16 h-16 text-sage mx-auto mb-4" />
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
@@ -83,7 +94,7 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block font-heading font-medium text-foreground mb-1">
@@ -92,16 +103,14 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    {...register("name")}
                     className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors ${
                       errors.name ? "border-destructive" : "border-border focus:border-golden"
                     }`}
                     placeholder="Jane Smith"
                   />
                   {errors.name && (
-                    <p className="mt-1 font-body text-sm text-destructive">{errors.name}</p>
+                    <p className="mt-1 font-body text-sm text-destructive">{errors.name.message}</p>
                   )}
                 </div>
 
@@ -113,16 +122,14 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    {...register("email")}
                     className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors ${
                       errors.email ? "border-destructive" : "border-border focus:border-golden"
                     }`}
                     placeholder="jane@example.com"
                   />
                   {errors.email && (
-                    <p className="mt-1 font-body text-sm text-destructive">{errors.email}</p>
+                    <p className="mt-1 font-body text-sm text-destructive">{errors.email.message}</p>
                   )}
                 </div>
 
@@ -133,23 +140,37 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
-                    name="message"
                     rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
+                    {...register("message")}
                     className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors resize-none ${
                       errors.message ? "border-destructive" : "border-border focus:border-golden"
                     }`}
                     placeholder="Tell us about your child and what you're looking for in a music program..."
                   />
                   {errors.message && (
-                    <p className="mt-1 font-body text-sm text-destructive">{errors.message}</p>
+                    <p className="mt-1 font-body text-sm text-destructive">{errors.message.message}</p>
                   )}
                 </div>
 
-                <button type="submit" className="btn-primary inline-flex items-center gap-2">
-                  <Send className="w-4 h-4" />
-                  Send Message
+                <button 
+                  type="submit" 
+                  className="btn-primary inline-flex items-center gap-2"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
             )}
