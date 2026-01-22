@@ -1,8 +1,8 @@
-import { Resend } from "resend"; // Changed from "resend/mod.ts"
+import { Resend } from "resend";
 
 // Define CORS headers for the Edge Function
 const CORS_HEADERS = {
-  "Access-Control-Allow-Origin": "*", // Adjust this to your frontend's origin in production
+  "Access-Control-Allow-Origin": "https://michaelbritten.net", // Updated to your specific domain
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
