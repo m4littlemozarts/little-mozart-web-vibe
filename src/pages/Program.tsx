@@ -173,36 +173,31 @@ const Program = () => {
               <li className="flex gap-3">
                 <span className="text-golden font-heading font-bold">♪</span>
                 <span className="font-body text-foreground">
-                  <strong className="font-semibold">Singing and Movement:</strong> Songs 
-                  and finger plays that make learning music theory feel like play.
+                  <strong className="font-semibold">Parental Participation:</strong> Classes are a place for students and parents to explore the joys of music together. Parents join in singing and dancing activities and help keep students on track while learning at the keyboard. No musical background needed, you'll learn everything necessary to support your child's success through the class.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-golden font-heading font-bold">♪</span>
                 <span className="font-body text-foreground">
-                  <strong className="font-semibold">Rhythm Activities:</strong> Clapping, 
-                  tapping, and moving to internalize beat and rhythm patterns.
+                  <strong className="font-semibold">Keyboard Exploration:</strong> Students learn and play fun songs together that progressively build their piano technique. The Music for Little Mozart curriculum has been developing young pianists for over 20 years.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-golden font-heading font-bold">♪</span>
                 <span className="font-body text-foreground">
-                  <strong className="font-semibold">Keyboard Exploration:</strong> Gentle 
-                  introduction to the piano with age-appropriate technique.
+                  <strong className="font-semibold">Singing, Dancing and Movement Activities:</strong> Fun and energetic musical activities keep students engaged and lay the foundations to develop a deeper understanding of music. Expect to sing, dance and play along.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-golden font-heading font-bold">♪</span>
                 <span className="font-body text-foreground">
-                  <strong className="font-semibold">Ear Training:</strong> Games that develop 
-                  the ability to recognize pitches, dynamics, and musical patterns.
+                  <strong className="font-semibold">Work Book and Flashcards:</strong> Musical concepts are reinforced with fun coloring exercises and group flash cards. Students build confidence as they recognize and apply musical concepts.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-golden font-heading font-bold">♪</span>
                 <span className="font-body text-foreground">
-                  <strong className="font-semibold">Story Time:</strong> Adventures with 
-                  Mozart Mouse and friends that teach musical concepts through narrative.
+                  <strong className="font-semibold">Music Friend Helpers:</strong> Classes center on the adventures of the lovable characters Beethoven Bear and Mozart Mouse as they learn about music. Every student gets their own plushie music friends to help them learn and practice.
                 </span>
               </li>
             </ul>

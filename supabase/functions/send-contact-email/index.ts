@@ -1,4 +1,4 @@
-import { Resend } from "resend";
+import { Resend } from "https://esm.sh/resend@3.5.0";
 
 // Define CORS headers for the Edge Function
 const CORS_HEADERS = {
@@ -92,7 +92,7 @@ Deno.serve(async (req) => {
       JSON.stringify({
         error: {
           type: "NETWORK_ERROR",
-          message: error.message || "An unexpected error occurred.",
+          message: error instanceof Error ? error.message : "An unexpected error occurred.",
         },
       }),
       {
