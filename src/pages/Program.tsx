@@ -20,7 +20,7 @@ const Program = () => {
 
       {/* Curriculum Overview */}
       <section className="section-container pt-0">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4">
               The Little Mozarts Curriculum
