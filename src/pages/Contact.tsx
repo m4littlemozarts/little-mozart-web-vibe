@@ -13,7 +13,7 @@ const contactSchema = z.object({
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
 });
 
-type ContactFormData = z.infer<typeof typeof contactSchema>;
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contact = () => {
   const {
@@ -36,7 +36,7 @@ const Contact = () => {
     setIsSubmittedSuccessfully(false); // Reset submission status on new attempt
 
     try {
-      const response = await fetch("https://voinvnkprtnirrpilwry.supabase.co/functions/v1/send-contact-email", { // Updated URL
+      const response = await fetch("http://localhost:54321/functions/v1/send-contact-email", { // Adjust URL for production
         method: "POST",
         headers: {
           "Content-Type": "application/json",
