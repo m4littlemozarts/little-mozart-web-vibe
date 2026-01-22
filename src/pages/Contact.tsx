@@ -36,7 +36,7 @@ const Contact = () => {
     setIsSubmittedSuccessfully(false); // Reset submission status on new attempt
 
     try {
-      const response = await fetch("http://localhost:54321/functions/v1/send-contact-email", { // Adjust URL for production
+      const response = await fetch("https://voinvnkprtnirrpilwry.supabase.co/functions/v1/send-contact-email", { // Updated URL
         method: "POST",
         headers: {
           "Content-Type": "application/json",
