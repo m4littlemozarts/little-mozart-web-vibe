@@ -1,5 +1,5 @@
 {
   "imports": {
-    "resend/": "npm:resend@3.5.0/"
+    "resend": "npm:resend@3.5.0"
   }
 }
