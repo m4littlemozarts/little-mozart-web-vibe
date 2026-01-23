@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2"> {/* Removed mb-4 from here */}
+            <div className="flex items-center gap-2 mb-4"> {/* Wrapper for image and text */}
               <img
                 src={conductorBear}
                 alt="Conductor Bear"
                 className="w-10 h-10 object-contain"
               />
-              <h4 className="font-heading font-semibold text-foreground mb-4"> {/* Added mb-4 here */}
+              <h4 className="font-heading font-semibold text-foreground">
                 Music for Little Mozarts
               </h4>
             </div>
