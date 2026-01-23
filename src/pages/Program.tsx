@@ -13,7 +13,7 @@ const Program = () => {
       {/* Hero */}
       <section className="section-container text-center pb-0">
         <h1 className="section-heading text-4xl sm:text-5xl">About Our Program</h1>
-        <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-7">
+        <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
           The Music for Little Mozarts curriculum is meticulously orchestrated to bring your child into the world of music.
         </p>
       </section>
@@ -67,7 +67,16 @@ const Program = () => {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-body text-foreground leading-relaxed">
-                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program lasts approximately two years covering all four book levels through weekly 40 minute classes. There are no more than 8 students in a class and we progress through the books when the students are ready on an individual level. Students have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
+                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program lasts approximately two years covering{" "}
+                <a 
+                  href="https://www.alfred.com/music-for-little-mozarts/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="underline hover:text-golden transition-colors"
+                >
+                  all four book levels
+                </a>{" "}
+                through weekly 40 minute classes. There are no more than 8 students in a class and we progress through the books when the students are ready on an individual level. Students have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
               </p>
             </div>
             
