@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
-import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react";
+import { MapPin, Mail, Send, CheckCircle } from "lucide-react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -193,8 +193,14 @@ const Contact = () => {
                       Location
                     </h3>
                     <p className="font-body text-muted-foreground">
-                      Steinway Gallery<br />
-                      Reno, Nevada
+                      <a 
+                        href="https://www.google.com/maps/search/?api=1&query=500+E+Moana+Ln,+Reno,+NV+89502" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:underline hover:text-golden transition-colors"
+                      >
+                        Steinway Piano Gallery of Reno, NV
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -208,27 +214,10 @@ const Contact = () => {
                       Email
                     </h3>
                     <a 
-                      href="mailto:info@littlemozart.com" 
+                      href="mailto:m4littlemozarts@gmail.com" 
                       className="font-body text-golden hover:underline"
                     >
-                      info@littlemozart.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-sage" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-semibold text-foreground mb-1">
-                      Phone
-                    </h3>
-                    <a 
-                      href="tel:+17755551234" 
-                      className="font-body text-golden hover:underline"
-                    >
-                      (775) 555-1234
+                      m4littlemozarts@gmail.com
                     </a>
                   </div>
                 </div>
