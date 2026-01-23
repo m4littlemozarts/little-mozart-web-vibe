@@ -9,14 +9,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h4 className="font-heading font-semibold text-foreground mb-4 flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-4"> {/* Wrapper for image and text */}
               <img
                 src={conductorBear}
                 alt="Conductor Bear"
                 className="w-10 h-10 object-contain"
               />
-              Music for Little Mozarts
-            </h4>
+              <h4 className="font-heading font-semibold text-foreground">
+                Music for Little Mozarts
+              </h4>
+            </div>
             <p className="font-body text-muted-foreground text-sm leading-relaxed">
               Beloved early music education program taught at the Steinway Piano Gallery of Reno, NV for over 15 years.
             </p>
