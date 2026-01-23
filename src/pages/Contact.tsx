@@ -231,11 +231,10 @@ const Contact = () => {
                 Classes are held on weekday evenings once a week. We are taking applications for a new cohort starting in March 2026. We plan to start offering Saturday classes later in 2026 to accommodate more families.
               </p>
               <h3 className="font-heading font-semibold text-foreground mb-3">
-                What to Bring
+                Course Material
               </h3>
               <p className="font-body text-muted-foreground text-sm">
-                Just bring your child and their curiosity! All materials are 
-                provided. Students will receive their own lesson books to take home.
+                Books and Music Friend Helper plushies are purchased at the Steinway Piano Gallery front desk.
               </p>
             </div>
           </div>
