@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="md:justify-self-center">
             <h4 className="font-heading font-semibold text-foreground mb-4 pt-2">
               Quick Links
             </h4>
