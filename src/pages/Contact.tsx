@@ -143,7 +143,7 @@ const Contact = () => {
                     className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors resize-none ${
                       errors.message ? "border-destructive" : "border-border focus:border-golden"
                     }`}
-                    placeholder="Tell us about your child and what you're looking for in a music program..."
+                    placeholder="Tell us about your child or any questions you may have. We're looking forward to getting in touch!"
                   />
                   {errors.message && (
                     <p className="mt-1 font-body text-sm text-destructive">{errors.message.message}</p>
