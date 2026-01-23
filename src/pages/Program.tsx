@@ -227,10 +227,10 @@ const Program = () => {
       <section className="section-container text-center pt-0">
         <DecorativeDivider className="mb-10" />
         <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
-          Ready to enroll your little musician?
+          Ready to embark on a musical adventure?
         </h2>
         <p className="font-body text-muted-foreground mb-6 max-w-lg mx-auto">
-          Contact us to learn about class schedules, pricing, and availability.
+          Contact us to learn more about the program and cohort openings.
         </p>
         <Link to="/contact" className="btn-primary">
           Contact Us
