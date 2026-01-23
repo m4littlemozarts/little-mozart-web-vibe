@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import { User } from "lucide-react";
 import christineBarden from "@/assets/christine-barden.png";
+import michaelBritten from "@/assets/michael-britten.png";
 
 interface TeacherProps {
   name: string;
@@ -52,9 +53,9 @@ const Teachers = () => {
       imageUrl: christineBarden,
     },
     {
-      name: "Michael Britten", // Changed name
-      bio: "this bio isn't finished, I'm still working on it.", // Changed bio
-      imageUrl: "", // Add image URL here
+      name: "Michael Britten",
+      bio: "this bio isn't finished, I'm still working on it.",
+      imageUrl: michaelBritten,
     },
   ];
 
