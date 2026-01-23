@@ -16,12 +16,11 @@ const Footer = () => {
                 className="w-10 h-10 object-contain"
               />
               <span className="font-heading font-bold text-foreground">
-                Music for Little Mozart
+                Music for Little Mozarts
               </span>
             </div>
             <p className="font-body text-muted-foreground text-sm leading-relaxed">
-              Nurturing young musicians through joyful, age-appropriate music education 
-              at Steinway Gallery in Reno, Nevada.
+              Beloved early music education program taught at the Steinway Piano Gallery of Reno, NV for over 15 years.
             </p>
           </div>
 
