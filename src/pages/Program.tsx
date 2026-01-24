@@ -67,7 +67,7 @@ const Program = () => {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-body text-foreground leading-relaxed">
-                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program lasts approximately two years covering{" "}
+                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program is designed for preschool aged children between the ages of four to five. It lasts approximately two years, covering{" "}
                 <a 
                   href="https://www.alfred.com/music-for-little-mozarts/" 
                   target="_blank" 
@@ -76,7 +76,7 @@ const Program = () => {
                 >
                   all four book levels
                 </a>{" "}
-                through weekly 40 minute classes. There are no more than 8 students in a class and we progress through the books when the students are ready on an individual level. Students have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
+                through weekly 40 minute classes. There are no more than eight students in a class and we progress through the book levels when the students are ready. Kids have the opportunity to make friends, learn and grow in the tight knit community of their cohort.
               </p>
             </div>
             
