@@ -54,7 +54,7 @@ const Teachers = () => {
     },
     {
       name: "Michael Britten",
-      bio: "this bio isn't finished, I'm still working on it.",
+      bio: "Michael Britten brings a lifelong love of music to the Little Mozarts program. His musical journey spans classical composition, jazz piano performance, and vocal work with local ensembles including the Reno Phil Choir, TOCCATA, and The AJJ Jazz Singers. A recent graduate of the Scorecraft Academy professional composition program with earlier composition training at the San Francisco Conservatory of Music Pre-College program, he combines traditional piano pedagogy with a creative, playful approach to making music. After several years working as a civil engineer, Michael has returned to his musical roots as a teacher and composer in Reno. He is excited to inspire the next generation of young musicians through the Music for Little Mozarts program.",
       imageUrl: michaelBritten,
     },
   ];
