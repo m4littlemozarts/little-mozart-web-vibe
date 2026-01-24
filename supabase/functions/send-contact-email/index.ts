@@ -52,7 +52,7 @@ Deno.serve(async (req) => {
     const resend = new Resend(resendApiKey);
 
     const { data, error } = await resend.emails.send({
-      from: "your-verified-email@your-domain.com", // IMPORTANT: Update this to your verified Resend email
+      from: "onboarding@resend.dev", // Placeholder, user will update later
       to: "m4littlemozarts@gmail.com",
       subject: `New Contact Form Submission from ${name}`,
       html: `

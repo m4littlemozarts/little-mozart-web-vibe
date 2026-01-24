@@ -35,15 +35,8 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmittedSuccessfully(false); // Reset submission status on new attempt
 
-    const SUPABASE_CONTACT_FUNCTION_URL = import.meta.env.VITE_SUPABASE_CONTACT_FUNCTION_URL;
-
-    if (!SUPABASE_CONTACT_FUNCTION_URL) {
-      toast.error("Contact form submission is not configured. Please set VITE_SUPABASE_CONTACT_FUNCTION_URL.");
-      return;
-    }
-
     try {
-      const response = await fetch(SUPABASE_CONTACT_FUNCTION_URL, {
+      const response = await fetch("https://voinvnkprtnirrpilwry.supabase.co/functions/v1/send-contact-email", { // Updated URL
         method: "POST",
         headers: {
           "Content-Type": "application/json",
