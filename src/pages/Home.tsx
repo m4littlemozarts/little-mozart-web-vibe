@@ -48,7 +48,7 @@ const Home = () => {
         }}>
             <p className="font-body text-lg text-foreground leading-relaxed">In Music for Little Mozarts Class, parents and children have the opportunity to share in the joy of making music together.</p>
             
-            <p className="font-body text-foreground leading-relaxed">Starting music class early builds on the pre-school age child's sense of fantasy (learning piano with music friends Mozart Mouse and Beethoven Bear), their ear's ability to absorb musical pitches, rhythms, musical patterns, and their enthusiasm for learning new things.</p>
+            <p className="font-body text-foreground leading-relaxed">Each week we sing, dance, listen and play at the piano in a class designed for preschool aged students (ages 4-5). Along the way, students are intuitively learning the language of music, building a lifelong connection to the arts.</p>
 
             {/* Group characters image */}
             <div className="flex justify-center py-4">
@@ -59,11 +59,7 @@ const Home = () => {
               />
             </div>
 
-            <p className="font-body text-foreground leading-relaxed">Using the beloved <em>Music for Little Mozarts</em> curriculum, we guide 
-              young learners ages 4-6 through a joyful introduction to piano, music 
-              fundamentals, and creative expression. Classes are held at the beautiful 
-              Steinway Gallery in Reno, Nevada.
-            </p>
+            <p className="font-body text-foreground leading-relaxed">Starting music class early builds on the pre-school age child's sense of fantasy (learning piano with music friends Mozart Mouse and Beethoven Bear), their ear's ability to absorb musical pitches, rhythms, musical patterns, and their enthusiasm for learning new things.</p>
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
