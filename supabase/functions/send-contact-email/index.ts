@@ -2,7 +2,7 @@ import { Resend } from "https://esm.sh/resend@3.5.0";
 
 // Define CORS headers for the Edge Function
 const CORS_HEADERS = {
-  "Access-Control-Allow-Origin": "https://michaelbritten.net", // Updated to your specific domain
+  "Access-Control-Allow-Origin": "https://music4littlemozarts.com", // Updated to your specific domain
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
