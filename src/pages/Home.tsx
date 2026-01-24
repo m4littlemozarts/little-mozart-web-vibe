@@ -48,7 +48,7 @@ const Home = () => {
         }}>
             <p className="font-body text-lg text-foreground leading-relaxed">In Music for Little Mozarts Class, parents and children have the opportunity to share in the joy of making music together.</p>
             
-            <p className="font-body text-foreground leading-relaxed">Each week we sing, dance, listen and play at the piano in a class designed for preschool aged students (ages 4-5). Along the way, students are intuitively learning the language of music, building a lifelong connection to the arts.</p>
+            <p className="font-body text-foreground leading-relaxed">Each week, we sing, dance, listen and play at the piano in a class designed for preschool aged students (ages 4-5). Along the way, students intuitively learn the language of music and build a lifelong connection to the arts.</p>
 
             {/* Group characters image */}
             <div className="flex justify-center py-4">
@@ -78,7 +78,7 @@ const Home = () => {
           {/* Map Section */}
           <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <p className="font-body text-muted-foreground text-center mb-4">
-              Classes are held at the Music for Little Mozarts Studio in the Steinway Piano Gallery of Reno, NV.
+              Classes are held at the Music for Little Mozarts Studio inside the Steinway Piano Gallery of Reno, Nevada.
             </p>
             <div className="rounded-lg overflow-hidden shadow-md max-w-xl mx-auto">
               <StudioMap />
