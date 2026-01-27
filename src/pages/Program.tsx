@@ -29,10 +29,10 @@ const Program = () => {
             </h2>
             <div className="space-y-4">
               <p className="font-body text-foreground leading-relaxed">
-                The Music for little Mozarts Program guides students through the fundamentals of piano and music by interweaving sight reading and singing, rhythmic recall, and piano technique with play, dance and exploration. Friendly characters such as Beethoven Bear and Mozart Mouse anchor student's learning through story based adventure.
+                The Music for Little Mozarts Program guides students through the fundamentals of piano and music by interweaving sight reading and singing, rhythmic recall, and piano technique with play, dance and exploration. Friendly characters such as Beethoven Bear and Mozart Mouse anchor student's learning through story based adventure.
               </p>
               <p className="font-body text-foreground leading-relaxed">
-                The Music for Little Mozarts curriculum was developed by Christine H. Barden, the director here at the Reno Steinway Piano Gallery. She is the composer and mastermind behind the program. First published in 1998, Music for little Mozarts classes are taught across the country and abroad. The organic longevity of the program is a testament to its effectiveness and the joy it brings students, parents and teachers.
+                The Music for Little Mozarts curriculum was developed by Christine H. Barden, Gayle Kowalchyk, and E. L. Lancaster. Christine H. Barden runs the Music for Little Mozarts program here at the Reno Steinway Piano Gallery. First published in 1999, Music for little Mozarts classes are taught across the country and around the world. The organic longevity of the program is a testament to its effectiveness and the joy it brings students, parents and teachers.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Program = () => {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-body text-foreground leading-relaxed">
-                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program is designed for preschool aged children between the ages of four to five. It lasts approximately two years, covering{" "}
+                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program is designed for preschool aged children beginning at the age of four to five. It lasts approximately two years, covering{" "}
                 <a 
                   href="https://www.alfred.com/music-for-little-mozarts/" 
                   target="_blank" 
@@ -183,7 +183,7 @@ const Program = () => {
                 <li className="flex gap-3">
                   <span className="text-golden font-heading font-bold">♪</span>
                   <span className="font-body text-foreground">
-                    <strong className="font-semibold">Parental Participation:</strong> Classes are a place for students and parents to explore the joys of music together. Parents join in singing and dancing activities and help keep students on track while learning at the keyboard. No musical background needed, you'll learn everything necessary to support your child's success through the class.
+                    <strong className="font-semibold">Parental Participation:</strong> Classes are a place for students and parents to explore the joys of music together. Parents join in singing and dancing activities and help keep students on track while learning at the keyboard. No musical background needed, you'll learn everything necessary to support your child's success through the class. Student's will need a keyboard at home.
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -195,7 +195,7 @@ const Program = () => {
                 <li className="flex gap-3">
                   <span className="text-golden font-heading font-bold">♪</span>
                   <span className="font-body text-foreground">
-                    <strong className="font-semibold">Singing, Dancing and Movement Activities:</strong> Fun and energetic musical activities keep students engaged and lay the foundations to develop a deeper understanding of music. Expect to sing, dance and play along.
+                    <strong className="font-semibold">Singing, Dancing and Movement Activities:</strong> Fun and energetic musical activities keep students engaged and lay the foundation to develop a deeper understanding of music. Expect to sing, dance and play along.
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -207,7 +207,7 @@ const Program = () => {
                 <li className="flex gap-3">
                   <span className="text-golden font-heading font-bold">♪</span>
                   <span className="font-body text-foreground">
-                    <strong className="font-semibold">Music Friend Helpers:</strong> Classes center on the adventures of the lovable characters Beethoven Bear and Mozart Mouse as they learn about music. Every student gets their own plushie music friends to help them learn and practice.
+                    <strong className="font-semibold">Music Friend Helpers:</strong> Classes center on the adventures of the lovable characters Beethoven Bear and Mozart Mouse as they learn about music. Every student loves the plushie music friends that help them learn and practice.
                   </span>
                 </li>
               </ul>
