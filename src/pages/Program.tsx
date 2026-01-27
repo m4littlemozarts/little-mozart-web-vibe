@@ -67,7 +67,7 @@ const Program = () => {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="font-body text-foreground leading-relaxed">
-                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program is designed for preschool aged children beginning at the age of four to five. It lasts approximately two years, covering{" "}
+                Our program is looking for parents who are invested in their child's education and development. The Music for Little Mozarts program is designed for preschool aged children beginning at the ages of four to five. It lasts approximately two years, covering{" "}
                 <a 
                   href="https://www.alfred.com/music-for-little-mozarts/" 
                   target="_blank" 
