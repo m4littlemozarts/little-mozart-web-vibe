@@ -228,7 +228,7 @@ const Contact = () => {
                 Class Schedule
               </h3>
               <p className="font-body text-muted-foreground text-sm mb-4">
-                Classes are held on weekday evenings once a week. We are taking applications for a new cohort starting in March 2026. We plan to start offering Saturday classes later in 2026 to accommodate more families.
+                Classes are held on weekday afternoons/evenings once a week. We are taking applications for a new cohort starting in March 2026. We plan to start offering Saturday classes later in 2026 to accommodate more families.
               </p>
               <h3 className="font-heading font-semibold text-foreground mb-3">
                 Course Material
