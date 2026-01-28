@@ -90,84 +90,9 @@ const Program = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="bg-paper border-y-2 border-border mt-12">
-        <div className="section-container">
-          <h2 className="section-heading text-center">Benefits of Early Music Education</h2>
-          
-          <div className="grid md:grid-cols-3 gap-6 mt-10">
-            <div className="paper-card flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-dusty-rose/30 flex items-center justify-center flex-shrink-0">
-                  <Brain className="w-6 h-6 text-dusty-rose" />
-                </div>
-                <h3 className="font-heading text-lg font-semibold text-foreground">
-                  Brain Development & Executive Function
-                </h3>
-              </div>
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                "Music training has a positive effect on inhibitory control, working memory, and cognitive flexibility in preschool children aged 3–6 years. Children's music training groups showed significantly improved inhibitory control, working memory, and cognitive flexibility in comparison with control groups."
-              </p>
-              <a 
-                href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1522962/full" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
-              >
-                Frontiers in Psychology, 2024
-              </a>
-            </div>
-
-            <div className="paper-card flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center flex-shrink-0">
-                  <Eye className="w-6 h-6 text-sage" />
-                </div>
-                <h3 className="font-heading text-lg font-semibold text-foreground">
-                  Attention & Focus
-                </h3>
-              </div>
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                "Rhythmic patterns drive attention focus, and musical elements such as rhythm, melody, and harmony provide multidimensional stimuli that facilitate switching attention. The results indicated significant improvement in attention control following the music intervention."
-              </p>
-              <a 
-                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7393235/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
-              >
-                Frontiers in Neuroscience, 2020
-              </a>
-            </div>
-
-            <div className="paper-card flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-golden/30 flex items-center justify-center flex-shrink-0">
-                  <BookOpen className="w-6 h-6 text-golden" />
-                </div>
-                <h3 className="font-heading text-lg font-semibold text-foreground">
-                  Language & Reading Skills
-                </h3>
-              </div>
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                "The fine-tuning of their auditory pathway could accelerate their development of language and reading, as well as other abilities. Within two years of the study, the neuroscientists found the auditory systems of children in the music program were maturing faster than in the other children."
-              </p>
-              <a 
-                href="https://today.usc.edu/childrens-brains-develop-faster-with-music-training/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
-              >
-                USC Brain and Creativity Institute
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* What to Expect */}
-      <section className="section-container">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-paper border-y-2 border-border mt-12"> {/* Moved styling here */}
+        <div className="section-container">
           <h2 className="section-heading text-center mb-8">What to Expect in Class</h2>
           
           <div className="relative flex items-center justify-center mt-8">
@@ -219,6 +144,79 @@ const Program = () => {
               alt="Beethoven Bear plushie" 
               className="hidden md:block absolute -right-32 lg:-right-40 h-40 lg:h-48 w-auto drop-shadow-lg"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="section-container"> {/* Removed styling from here */}
+        <h2 className="section-heading text-center">Benefits of Early Music Education</h2>
+        
+        <div className="grid md:grid-cols-3 gap-6 mt-10">
+          <div className="paper-card flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-dusty-rose/30 flex items-center justify-center flex-shrink-0">
+                <Brain className="w-6 h-6 text-dusty-rose" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold text-foreground">
+                Brain Development & Executive Function
+              </h3>
+            </div>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              "Music training has a positive effect on inhibitory control, working memory, and cognitive flexibility in preschool children aged 3–6 years. Children's music training groups showed significantly improved inhibitory control, working memory, and cognitive flexibility in comparison with control groups."
+            </p>
+            <a 
+              href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1522962/full" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
+            >
+              Frontiers in Psychology, 2024
+            </a>
+          </div>
+
+          <div className="paper-card flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-sage/30 flex items-center justify-center flex-shrink-0">
+                <Eye className="w-6 h-6 text-sage" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold text-foreground">
+                Attention & Focus
+              </h3>
+            </div>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              "Rhythmic patterns drive attention focus, and musical elements such as rhythm, melody, and harmony provide multidimensional stimuli that facilitate switching attention. The results indicated significant improvement in attention control following the music intervention."
+            </p>
+            <a 
+              href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7393235/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
+            >
+              Frontiers in Neuroscience, 2020
+            </a>
+          </div>
+
+          <div className="paper-card flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-golden/30 flex items-center justify-center flex-shrink-0">
+                <BookOpen className="w-6 h-6 text-golden" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold text-foreground">
+                Language & Reading Skills
+              </h3>
+            </div>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed">
+              "The fine-tuning of their auditory pathway could accelerate their development of language and reading, as well as other abilities. Within two years of the study, the neuroscientists found the auditory systems of children in the music program were maturing faster than in the other children."
+            </p>
+            <a 
+              href="https://today.usc.edu/childrens-brains-develop-faster-with-music-training/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-body text-xs text-golden hover:text-golden/80 hover:underline mt-auto"
+            >
+              USC Brain and Creativity Institute
+            </a>
           </div>
         </div>
       </section>
