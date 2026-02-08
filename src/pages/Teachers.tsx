@@ -35,9 +35,9 @@ const TeacherCard = ({ name, bio, imageUrl, imageAlt }: TeacherProps) => {
         
         {/* Info */}
         <div className="flex-1">
-          <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
+          <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
             {name}
-          </h3>
+          </h2>
           <p className="font-body text-foreground leading-relaxed">
             {bio}
           </p>
@@ -57,7 +57,7 @@ const Teachers = () => {
     },
     {
       name: "Michael Britten",
-      bio: "Michael Britten brings a lifelong love of music to the Little Mozarts program. His musical journey spans classical composition, jazz piano performance, and vocal work with local ensembles including the Reno Phil Choir, TOCCATA, and The AJJ Jazz Singers. A recent graduate of the Scorecraft Academy professional composition program with earlier composition training at the San Francisco Conservatory of Music Pre-College program, he combines traditional piano pedagogy with a creative, playful approach to making music. After several years working as a civil engineeer, Michael has returned to his musical roots as a teacher and composer in Reno. He is excited to inspire the next generation of young musicians through the Music for Little Mozarts program.",
+      bio: "Michael Britten brings a lifelong love of music to the Little Mozarts program. His musical journey spans classical composition, jazz piano performance, and vocal work with local ensembles including the Reno Phil Choir, TOCCATA, and The AJJ Jazz Singers. A recent graduate of the Scorecraft Academy professional composition program with earlier composition training at the San Francisco Conservatory of Music Pre-College program, he combines traditional piano pedagogy with a creative, playful approach to making music. After several years working as a xivil engineeer, Michael has returned to his musical roots as a teacher and composer in Reno. He is excited to inspire the next generation of young musicians through the Music for Little Mozarts program.",
       imageUrl: michaelBritten,
       imageAlt: "Michael Britten, preschool piano instructor in Reno.",
     },

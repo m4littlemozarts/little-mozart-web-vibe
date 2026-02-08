@@ -70,9 +70,9 @@ const Home = () => {
 
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-in">Music for Little Mozarts</h1>
           
-          <p className="font-heading text-xl sm:text-2xl text-muted-foreground mb-8 italic animate-fade-in" style={{
+          <h2 className="font-heading text-xl sm:text-2xl text-muted-foreground mb-8 italic font-normal animate-fade-in" style={{
           animationDelay: "0.1s"
-        }}>A Piano Course to Bring Out the Music in Every Young Child</p>
+        }}>A Piano Course to Bring Out the Music in Every Young Child</h2>
 
           <DecorativeDivider className="my-8" />
 
@@ -110,9 +110,9 @@ const Home = () => {
 
           {/* Map Section */}
           <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <p className="font-body text-muted-foreground text-center mb-4">
+            <h2 className="font-body text-muted-foreground text-center mb-4 text-base font-normal">
               Classes are held at the Music for Little Mozarts Studio inside the Steinway Piano Gallery of Reno, Nevada.
-            </p>
+            </h2>
             <div className="rounded-lg overflow-hidden shadow-md max-w-xl mx-auto">
               <StudioMap />
             </div>
