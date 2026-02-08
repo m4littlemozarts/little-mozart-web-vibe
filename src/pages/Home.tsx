@@ -3,11 +3,18 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import MusicNote from "@/components/MusicNote";
 import StudioMap from "@/components/StudioMap";
+import SEO from "@/components/SEO";
 import { Heart, MapPin } from "lucide-react";
 import mmbb from "@/assets/mmbb.png";
 import groupCharacters from "@/assets/group-characters.png";
+
 const Home = () => {
-  return <Layout>
+  return (
+    <Layout>
+      <SEO 
+        title="Piano Lessons for Kids in Reno | Preschool Music Classes | Music for Little Mozarts"
+        description="Group piano lessons for ages 4-5 in Reno, NV. Music for Little Mozarts curriculum combines singing, dancing, and piano. Located at 500 E Moana Ln. Enroll now!"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="section-container text-center py-16 sm:py-24">
@@ -95,6 +102,8 @@ const Home = () => {
         </div>
       </section>
 
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default Home;

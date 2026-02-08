@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
+import SEO from "@/components/SEO";
 import { User } from "lucide-react";
 import christineBarden from "@/assets/christine-barden.png";
 import michaelBritten from "@/assets/michael-britten.png";
@@ -54,13 +55,17 @@ const Teachers = () => {
     },
     {
       name: "Michael Britten",
-      bio: "Michael Britten brings a lifelong love of music to the Little Mozarts program. His musical journey spans classical composition, jazz piano performance, and vocal work with local ensembles including the Reno Phil Choir, TOCCATA, and The AJJ Jazz Singers. A recent graduate of the Scorecraft Academy professional composition program with earlier composition training at the San Francisco Conservatory of Music Pre-College program, he combines traditional piano pedagogy with a creative, playful approach to making music. After several years working as a civil engineer, Michael has returned to his musical roots as a teacher and composer in Reno. He is excited to inspire the next generation of young musicians through the Music for Little Mozarts program.",
+      bio: "Michael Britten brings a lifelong love of music to the Little Mozarts program. His musical journey spans classical composition, jazz piano performance, and vocal work with local ensembles including the Reno Phil Choir, TOCCATA, and The AJJ Jazz Singers. A recent graduate of the Scorecraft Academy professional composition program with earlier composition training at the San Francisco Conservatory of Music Pre-College program, he combines traditional piano pedagogy with a creative, playful approach to making music. After several years working as a civil engineeer, Michael has returned to his musical roots as a teacher and composer in Reno. He is excited to inspire the next generation of young musicians through the Music for Little Mozarts program.",
       imageUrl: michaelBritten,
     },
   ];
 
   return (
     <Layout>
+      <SEO 
+        title="Expert Piano Teachers for Young Children | Music for Little Mozarts Reno"
+        description="Meet our piano instructors specializing in early childhood music education. Music for Little Mozarts teachers in Reno, Nevada make learning fun for preschoolers."
+      />
       {/* Hero */}
       <section className="section-container text-center pb-8">
         <h1 className="section-heading text-4xl sm:text-5xl">Meet Our Teachers</h1>

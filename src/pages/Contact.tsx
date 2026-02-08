@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
+import SEO from "@/components/SEO";
 import { MapPin, Mail, Send, CheckCircle } from "lucide-react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -63,6 +64,10 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Contact Music for Little Mozarts | Reno Piano Lessons"
+        description="Questions about piano lessons for your preschooler? Contact Music for Little Mozarts in Reno, NV. Visit us at 500 E Moana Ln."
+      />
       {/* Hero */}
       <section className="section-container text-center pb-8">
         <h1 className="section-heading text-4xl sm:text-5xl">Contact Us</h1>

@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
+import SEO from "@/components/SEO";
 import { BookOpen, Brain, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import dancingHippoMouseBear from "@/assets/dancing-hippo-mouse-bear.png";
@@ -10,6 +11,10 @@ import bbPlushie from "@/assets/bb-plushie.png";
 const Program = () => {
   return (
     <Layout>
+      <SEO 
+        title="Music for Little Mozarts Curriculum | Preschool Piano Program Reno"
+        description="Award-winning Music for Little Mozarts curriculum for ages 4-5. Our Reno piano program teaches kids through stories, games, and hands-on activities."
+      />
       {/* Hero */}
       <section className="section-container text-center pb-0">
         <h1 className="section-heading text-4xl sm:text-5xl">About Our Program</h1>
