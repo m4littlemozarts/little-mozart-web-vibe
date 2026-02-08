@@ -9,11 +9,36 @@ import mmbb from "@/assets/mmbb.png";
 import groupCharacters from "@/assets/group-characters.png";
 
 const Home = () => {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "MusicSchool",
+    "name": "Music for Little Mozarts",
+    "image": "https://music4littlemozarts.com/favicon-bear.png",
+    "@id": "https://music4littlemozarts.com",
+    "url": "https://music4littlemozarts.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "500 E Moana Ln",
+      "addressLocality": "Reno",
+      "addressRegion": "NV",
+      "postalCode": "89502",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.4925,
+      "longitude": -119.7909
+    },
+    "description": "Early childhood music education and piano lessons for preschoolers aged 4-5 in Reno, Nevada.",
+    "email": "m4littlemozarts@gmail.com"
+  };
+
   return (
     <Layout>
       <SEO 
         title="Piano Lessons for Kids in Reno | Preschool Music Classes | Music for Little Mozarts"
         description="Group piano lessons for ages 4-5 in Reno, NV. Music for Little Mozarts curriculum combines singing, dancing, and piano. Located at 500 E Moana Ln. Enroll now!"
+        schema={homeSchema}
       />
       {/* Hero Section */}
       <section className="relative overflow-hidden">

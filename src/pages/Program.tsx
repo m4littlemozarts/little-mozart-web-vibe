@@ -9,11 +9,41 @@ import mmPlushie from "@/assets/mm-plushie.png";
 import bbPlushie from "@/assets/bb-plushie.png";
 
 const Program = () => {
+  const programSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Music for Little Mozarts",
+    "description": "A comprehensive piano and music curriculum designed specifically for preschool-aged children (ages 4-5).",
+    "provider": {
+      "@type": "MusicSchool",
+      "name": "Music for Little Mozarts",
+      "sameAs": "https://music4littlemozarts.com"
+    },
+    "courseCode": "M4LM",
+    "educationalLevel": "Preschool",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "In-person",
+      "location": "Steinway Piano Gallery of Reno, NV",
+      "instructor": [
+        {
+          "@type": "Person",
+          "name": "Christine H. Barden"
+        },
+        {
+          "@type": "Person",
+          "name": "Michael Britten"
+        }
+      ]
+    }
+  };
+
   return (
     <Layout>
       <SEO 
         title="Music for Little Mozarts Curriculum | Preschool Piano Program Reno"
         description="Award-winning Music for Little Mozarts curriculum for ages 4-5. Our Reno piano program teaches kids through stories, games, and hands-on activities."
+        schema={programSchema}
       />
       {/* Hero */}
       <section className="section-container text-center pb-0">
