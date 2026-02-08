@@ -5,12 +5,14 @@ interface SEOProps {
   title: string;
   description: string;
   schema?: object;
+  image?: string;
 }
 
-const SEO = ({ title, description, schema }: SEOProps) => {
+const SEO = ({ title, description, schema, image }: SEOProps) => {
   const { pathname } = useLocation();
   const baseUrl = "https://music4littlemozarts.com";
   const canonicalUrl = `${baseUrl}${pathname === "/" ? "" : pathname}`;
+  const shareImage = image || `${baseUrl}/favicon-bear.png`;
 
   return (
     <Helmet>
@@ -24,12 +26,14 @@ const SEO = ({ title, description, schema }: SEOProps) => {
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content={shareImage} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={shareImage} />
 
       {/* Structured Data (JSON-LD) */}
       {schema && (
