@@ -24,7 +24,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2 group">
             <img
               src={conductorBear}
-              alt="Conductor Bear"
+              alt="Conductor Bear mascot for preschool music lessons in Reno, NV."
               className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
             />
             <span className="font-heading font-bold text-lg sm:text-xl text-foreground hidden sm:block">

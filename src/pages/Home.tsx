@@ -63,7 +63,7 @@ const Home = () => {
           <div className="mb-8 flex justify-center">
           <img
             src={mmbb}
-            alt="Mozart Mouse and Beethoven Bear with magical book"
+            alt="Beethoven Bear teaching preschoolers piano in Reno, NV."
             className="w-56 h-auto sm:w-72"
           />
           </div>
@@ -87,7 +87,7 @@ const Home = () => {
             <div className="flex justify-center py-4">
               <img
                 src={groupCharacters}
-                alt="Little Mozart characters group"
+                alt="Music for Little Mozarts character friends for group piano lessons."
                 className="w-full max-w-md h-auto"
               />
             </div>

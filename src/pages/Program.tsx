@@ -76,7 +76,7 @@ const Program = () => {
           <div className="relative flex items-center justify-center">
             <img 
               src={dancingHippoMouseBear} 
-              alt="Dancing Hippo, Mouse and Bear characters" 
+              alt="Dancing Hippo character helping children learn rhythm and movement in Reno, NV." 
               className="w-full max-w-sm drop-shadow-lg"
             />
           </div>
@@ -90,7 +90,7 @@ const Program = () => {
           <div className="relative flex items-center justify-center">
             <img 
               src={penguinWriting} 
-              alt="Penguin writing with a quill" 
+              alt="Penguin character teaching music notation to preschool students." 
               className="w-full max-w-xs drop-shadow-lg"
             />
           </div>
@@ -134,7 +134,7 @@ const Program = () => {
             {/* Mozart Mouse Plushie - Left */}
             <img 
               src={mmPlushie} 
-              alt="Mozart Mouse plushie" 
+              alt="Mozart Mouse plush mascot from Music for Little Mozarts curriculum." 
               className="hidden md:block absolute -left-32 lg:-left-40 h-40 lg:h-48 w-auto drop-shadow-lg"
             />
             
@@ -176,7 +176,7 @@ const Program = () => {
             {/* Beethoven Bear Plushie - Right */}
             <img 
               src={bbPlushie} 
-              alt="Beethoven Bear plushie" 
+              alt="Beethoven Bear plush teaching friend for early childhood music classes." 
               className="hidden md:block absolute -right-32 lg:-right-40 h-40 lg:h-48 w-auto drop-shadow-lg"
             />
           </div>

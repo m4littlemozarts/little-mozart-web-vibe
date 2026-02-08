@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <img
                 src={conductorBear}
-                alt="Conductor Bear"
+                alt="Conductor Bear mascot for preschool music lessons in Reno, NV."
                 className="w-10 h-10 object-contain"
               />
               <span className="font-heading font-bold text-foreground">
