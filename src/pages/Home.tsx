@@ -30,7 +30,8 @@ const Home = () => {
       "longitude": -119.7909
     },
     "description": "Early childhood music education and piano lessons for preschoolers aged 4-5 in Reno, Nevada.",
-    "email": "m4littlemozarts@gmail.com"
+    "email": "m4littlemozarts@gmail.com",
+    "priceRange": "$$"
   };
 
   return (
