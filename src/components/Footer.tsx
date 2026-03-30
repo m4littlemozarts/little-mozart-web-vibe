@@ -50,6 +50,11 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <a href="/enroll" className="font-body text-golden hover:text-golden/80 transition-colors text-sm font-semibold">
+                  Enroll
+                </a>
+              </li>
             </ul>
           </div>
 

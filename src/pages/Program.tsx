@@ -2,7 +2,6 @@ import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import SEO from "@/components/SEO";
 import { BookOpen, Brain, Eye } from "lucide-react";
-import { Link } from "react-router-dom";
 import dancingHippoMouseBear from "@/assets/dancing-hippo-mouse-bear.png";
 import penguinWriting from "@/assets/penguin-writing.png";
 import mmPlushie from "@/assets/mm-plushie.png";
@@ -263,11 +262,11 @@ const Program = () => {
           Ready to embark on a musical adventure?
         </h2>
         <p className="font-body text-muted-foreground mb-6 max-w-lg mx-auto">
-          Contact us to learn more about the program and cohort openings.
+          Ready to get your child started? Fill out our enrollment form — it only takes a couple minutes.
         </p>
-        <Link to="/contact" className="btn-primary">
-          Contact Us
-        </Link>
+        <a href="/enroll" className="btn-primary">
+          Enroll Now
+        </a>
       </section>
     </Layout>
   );

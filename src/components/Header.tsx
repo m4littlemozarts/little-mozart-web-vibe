@@ -10,7 +10,7 @@ const Header = () => {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/program", label: "Program" },
-    { to: "/teachers", label: "Teachers" }, // Updated label and path
+    { to: "/teachers", label: "Teachers" },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -43,6 +43,12 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="/enroll"
+              className="ml-2 btn-primary text-sm px-4 py-1.5"
+            >
+              Enroll
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -73,6 +79,13 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
+              <a
+                href="/enroll"
+                className="nav-link text-center font-semibold text-golden"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Enroll
+              </a>
             </div>
           </nav>
         )}

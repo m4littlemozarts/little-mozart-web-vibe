@@ -2,11 +2,11 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import DecorativeDivider from "@/components/DecorativeDivider";
 import SEO from "@/components/SEO";
-import { MapPin, Mail, Send, CheckCircle } from "lucide-react";
+import { MapPin, Mail, Send, CheckCircle, Music } from "lucide-react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "sonner"; // Using sonner for toast notifications
+import { toast } from "sonner";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -34,10 +34,10 @@ const Contact = () => {
   const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
 
   const onSubmit = async (data: ContactFormData) => {
-    setIsSubmittedSuccessfully(false); // Reset submission status on new attempt
+    setIsSubmittedSuccessfully(false);
 
     try {
-      const response = await fetch("https://voinvnkprtnirrpilwry.supabase.co/functions/v1/send-contact-email", { // Updated URL
+      const response = await fetch("https://music4littlemozarts.com/api/public/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,43 +48,55 @@ const Contact = () => {
       const result = await response.json();
 
       if (!response.ok) {
-        const errorMessage = result.error?.message || "Failed to send message. Please try again.";
-        toast.error(errorMessage);
+        toast.error(result.error || "Failed to send message. Please try again.");
         return;
       }
 
-      toast.success("Your message has been sent successfully!");
       setIsSubmittedSuccessfully(true);
-      reset(); // Clear form fields only on successful submission
+      reset();
     } catch (error) {
-      console.error("Network or unexpected error:", error);
+      console.error("Network error:", error);
       toast.error("Could not connect to the server. Please check your internet connection and try again.");
     }
   };
 
   return (
     <Layout>
-      <SEO 
-        title="Contact Music for Little Mozarts | Reno Piano Lessons"
-        description="Questions about piano lessons for your preschooler? Contact Music for Little Mozarts in Reno, NV. Visit us at 500 E Moana Ln."
+      <SEO
+        title="Contact & Enroll | Music for Little Mozarts | Reno Piano Lessons"
+        description="Enroll your preschooler in group piano lessons or send us a message. Music for Little Mozarts in Reno, NV at 500 E Moana Ln."
       />
-      {/* Hero */}
-      <section className="section-container text-center pb-8">
-        <h1 className="section-heading text-4xl sm:text-5xl">Contact Us</h1>
+
+      {/* Enrollment CTA */}
+      <section className="section-container text-center pb-4">
+        <h1 className="section-heading text-4xl sm:text-5xl">Ready to Start?</h1>
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-          Ready to embark on a musical adventure with your little one?<br /> We're here to answer any questions, lets get in touch! We look forward to helping your child discover the joy of music.
+          We're accepting applications for upcoming cohorts. Our enrollment form takes about 2 minutes and gets your child on our list.
         </p>
+        <div className="mt-6">
+          <a
+            href="/enroll"
+            className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-3"
+          >
+            <Music className="w-5 h-5" />
+            Enroll Now
+          </a>
+        </div>
       </section>
 
       <DecorativeDivider className="mb-8" />
 
+      {/* Contact Section */}
       <section className="section-container pt-0">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
-              Send Us a Message
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
+              Have a Question?
             </h2>
+            <p className="font-body text-muted-foreground mb-6 text-sm">
+              Not ready to enroll yet? No problem — send us a message and we'll get back to you.
+            </p>
 
             {isSubmittedSuccessfully ? (
               <div className="paper-card text-center py-12">
@@ -148,15 +160,15 @@ const Contact = () => {
                     className={`w-full px-4 py-3 rounded-lg border-2 bg-cream font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-golden/50 transition-colors resize-none ${
                       errors.message ? "border-destructive" : "border-border focus:border-golden"
                     }`}
-                    placeholder="Tell us about your child or any questions you may have. We're looking forward to getting in touch!"
+                    placeholder="Tell us about your child or any questions you may have."
                   />
                   {errors.message && (
                     <p className="mt-1 font-body text-sm text-destructive">{errors.message.message}</p>
                   )}
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn-primary inline-flex items-center gap-2"
                   disabled={isSubmitting}
                 >
@@ -196,10 +208,10 @@ const Contact = () => {
                       Location
                     </h3>
                     <p className="font-body text-muted-foreground">
-                      <a 
-                        href="https://www.google.com/maps/search/?api=1&query=500+E+Moana+Ln,+Reno,+NV+89502" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href="https://www.google.com/maps/search/?api=1&query=500+E+Moana+Ln,+Reno,+NV+89502"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:underline hover:text-golden transition-colors"
                       >
                         Steinway Piano Gallery of Reno, NV
@@ -216,8 +228,8 @@ const Contact = () => {
                     <h3 className="font-heading font-semibold text-foreground mb-1">
                       Email
                     </h3>
-                    <a 
-                      href="mailto:m4littlemozarts@gmail.com" 
+                    <a
+                      href="mailto:m4littlemozarts@gmail.com"
                       className="font-body text-golden hover:underline"
                     >
                       m4littlemozarts@gmail.com
@@ -233,7 +245,7 @@ const Contact = () => {
                 Class Schedule
               </h3>
               <p className="font-body text-muted-foreground text-sm mb-4">
-                Classes are held on weekday afternoons/evenings once a week. We are taking applications for a new cohort starting in March 2026. We plan to start offering Saturday classes later in 2026 to accommodate more families.
+                Classes are held on weekday afternoons/evenings once a week. We are taking applications for new cohorts starting soon.
               </p>
               <h3 className="font-heading font-semibold text-foreground mb-3">
                 Course Material

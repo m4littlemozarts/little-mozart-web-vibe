@@ -102,10 +102,10 @@ const Home = () => {
               <Heart className="w-4 h-4" />
               Discover Our Program
             </Link>
-            <Link to="/contact" className="btn-secondary inline-flex items-center justify-center gap-2">
+            <a href="/enroll" className="btn-secondary inline-flex items-center justify-center gap-2">
               <MapPin className="w-4 h-4" />
-              Get in Touch
-            </Link>
+              Enroll Now
+            </a>
           </div>
 
           {/* Map Section */}
